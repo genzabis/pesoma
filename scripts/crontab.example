@@ -1,0 +1,29 @@
+# PESOMA 2026 cron example
+# Sesuaikan PROJECT_DIR dan PHP_BIN dengan server produksi.
+
+SHELL=/bin/sh
+PROJECT_DIR=/var/www/pesoma
+PHP_BIN=/usr/bin/php
+CRON_ADMIN_EMAIL=admin@pesoma.local
+CRON_FROM_EMAIL=no-reply@pesoma.local
+CRON_FROM_NAME="PESOMA Cron"
+CRON_LOG_FILE=/var/log/pesoma/cron.log
+
+# Backup database harian
+0 1 * * * cd $PROJECT_DIR && $PHP_BIN scripts/backup_database.php
+
+# Tutup pendaftaran/upload otomatis sekitar masa deadline
+*/15 * * * * cd $PROJECT_DIR && $PHP_BIN scripts/close_registration.php
+*/15 * * * * cd $PROJECT_DIR && $PHP_BIN scripts/close_upload.php
+
+# Reminder upload H-7, H-3, H-1
+0 8 * * * cd $PROJECT_DIR && $PHP_BIN scripts/reminder_upload.php
+
+# Maintenance
+0 * * * * cd $PROJECT_DIR && $PHP_BIN scripts/cleanup_tokens.php
+0 2 * * * cd $PROJECT_DIR && $PHP_BIN scripts/cleanup_temp_files.php
+55 23 * * * cd $PROJECT_DIR && $PHP_BIN scripts/generate_daily_report.php
+
+# Notifikasi finalis/pemenang; script memiliki marker run-once agar tidak dobel kirim
+*/15 * * * * cd $PROJECT_DIR && $PHP_BIN scripts/notify_finalists.php
+*/15 * * * * cd $PROJECT_DIR && $PHP_BIN scripts/notify_winners.php

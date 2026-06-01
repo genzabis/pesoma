@@ -1,0 +1,28 @@
+Options -Indexes
+
+# Izinkan akses ke file media (gambar, video, dokumen)
+# Tapi tolak akses ke file executable untuk keamanan
+
+<IfModule mod_authz_core.c>
+    # Tolak akses ke file executable
+    <FilesMatch "\.(php|phtml|phar|cgi|pl|asp|aspx|jsp|sh|exe|bat|cmd)$">
+        Require all denied
+    </FilesMatch>
+    
+    # Izinkan akses ke file media
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|mp4|webm|pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|txt)$">
+        Require all granted
+    </FilesMatch>
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+    # Tolak akses ke file executable
+    <FilesMatch "\.(php|phtml|phar|cgi|pl|asp|aspx|jsp|sh|exe|bat|cmd)$">
+        Deny from all
+    </FilesMatch>
+    
+    # Izinkan akses ke file media
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|mp4|webm|pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|txt)$">
+        Allow from all
+    </FilesMatch>
+</IfModule>

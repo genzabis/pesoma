@@ -1,0 +1,78 @@
+/* ==========================================================================
+   PESOMA 2026 - Gaya khusus panel admin (admin.css)
+   Pelengkap dashboard.css untuk kebutuhan tampilan admin (filter, modal, form
+   dua kolom, log aktivitas).
+   ========================================================================== */
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    align-items: end;
+}
+
+form.two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+form.two .field:last-child {
+    grid-column: 1 / -1;
+}
+
+/* Modal (dialog) */
+.modal {
+    border: 0;
+    border-radius: 20px;
+    max-width: 820px;
+    width: 92%;
+    padding: 0;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, .45);
+}
+
+.modal-body {
+    padding: 22px;
+}
+
+.modal-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    border-bottom: 1px solid var(--line, #d9ead9);
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+}
+
+.close {
+    border: 0;
+    background: #eee;
+    border-radius: 999px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.rank {
+    font-weight: 900;
+    color: var(--green, #1B5E20);
+}
+
+/* Log aktivitas */
+.log-row code {
+    background: #f1f5f1;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.log-time {
+    color: var(--muted, #6b7280);
+    font-size: 13px;
+    white-space: nowrap;
+}

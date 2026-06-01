@@ -1,0 +1,63 @@
+/* ==========================================================================
+   PESOMA 2026 - Breakpoint responsif (responsive.css)
+   Penyesuaian layout untuk tablet & ponsel. Dipakai bersama style.css,
+   dashboard.css, dan admin.css.
+   ========================================================================== */
+
+@media (max-width: 1000px) {
+    .app {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        height: auto;
+    }
+
+    .main {
+        padding: 18px;
+    }
+
+    .span-3,
+    .span-4,
+    .span-6,
+    .span-8 {
+        grid-column: span 12;
+    }
+
+    .form-grid,
+    .filters,
+    form.two {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 760px) {
+    .nav {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .actions .btn {
+        width: auto;
+    }
+}

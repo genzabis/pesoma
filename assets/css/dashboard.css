@@ -1,0 +1,125 @@
+/* ==========================================================================
+   PESOMA 2026 - Layout dashboard bersama (dashboard.css)
+   Kerangka sidebar + main untuk panel peran (peserta, juri, panitia, admin).
+   Selaras dengan gaya inline di src/ *_layout.php.
+   ========================================================================== */
+
+.app {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, var(--green, #1B5E20), #0f3d13);
+    color: #fff;
+    padding: 24px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: auto;
+}
+
+.sidebar .brand {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.sidebar .role {
+    opacity: .85;
+    margin-bottom: 26px;
+}
+
+.sidebar .nav {
+    display: grid;
+    gap: 8px;
+}
+
+.sidebar .nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 14px;
+    font-weight: 800;
+    opacity: .9;
+}
+
+.sidebar .nav a.active,
+.sidebar .nav a:hover {
+    background: rgba(255, 255, 255, .16);
+    opacity: 1;
+    text-decoration: none;
+}
+
+.main {
+    padding: 28px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.topbar h1 {
+    margin: 0;
+    color: var(--green, #1B5E20);
+}
+
+.user-chip {
+    background: #fff;
+    border: 1px solid var(--line, #d9ead9);
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-weight: 800;
+}
+
+/* Grid 12 kolom untuk kartu statistik & konten */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
+.span-4 {
+    grid-column: span 4;
+}
+
+.span-6 {
+    grid-column: span 6;
+}
+
+.span-8 {
+    grid-column: span 8;
+}
+
+.span-12 {
+    grid-column: span 12;
+}
+
+.stat {
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--green, #1B5E20);
+    margin: 8px 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}

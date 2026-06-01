@@ -1,0 +1,286 @@
+[31-May-2026 00:36:04 Asia/Jakarta] PHP Warning:  Undefined array key "min_anggota" in D:\xampp\htdocs\pesoma\pages\detail-lomba.php on line 39
+[31-May-2026 09:28:28 Asia/Jakarta] PHP Warning:  Undefined array key "min_anggota" in D:\xampp\htdocs\pesoma\pages\detail-lomba.php on line 39
+[31-May-2026 09:51:04 Asia/Jakarta] PHP Warning:  Undefined array key "min_anggota" in D:\xampp\htdocs\pesoma\pages\detail-lomba.php on line 39
+[31-May-2026 10:01:11 Asia/Jakarta] PHP Warning:  Undefined array key "min_anggota" in D:\xampp\htdocs\pesoma\pages\detail-lomba.php on line 39
+[31-May-2026 10:01:20 Asia/Jakarta] PHP Warning:  Undefined array key "min_anggota" in D:\xampp\htdocs\pesoma\pages\detail-lomba.php on line 39
+[31-May-2026 10:47:18 Asia/Jakarta] PHP Warning:  Undefined array key "min_anggota" in D:\xampp\htdocs\pesoma\pages\detail-lomba.php on line 39
+[31-May-2026 11:17:35 Asia/Jakarta] PHP Warning:  Undefined array key "min_anggota" in D:\xampp\htdocs\pesoma\pages\detail-lomba.php on line 39
+[31-May-2026 11:17:42 Asia/Jakarta] PHP Warning:  Undefined array key "min_anggota" in D:\xampp\htdocs\pesoma\pages\detail-lomba.php on line 39
+[31-May-2026 12:40:04 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:04 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:04 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:04 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:04 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:10 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:10 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:10 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:10 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:10 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:10 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:24 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:24 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:24 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:24 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:24 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:24 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:32 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:32 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:32 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:32 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:32 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:32 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:36 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:37 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:37 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:37 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:37 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:37 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:37 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:46 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:46 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:46 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:46 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:46 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:46 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:40:49 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:42:43 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:42:43 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:42:43 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:42:43 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:42:43 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:42:43 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:42:44 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:42:44 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:42:44 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:42:44 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:42:44 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:42:44 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:42:51 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:42:51 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:42:51 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:42:51 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:42:51 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:42:51 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:42:53 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:42:53 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:42:53 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:42:53 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:42:53 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:42:53 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:42:59 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:42:59 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:42:59 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:42:59 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:42:59 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:42:59 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:43:02 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:43:02 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:43:02 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:43:02 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:43:02 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:43:02 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:43:04 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:43:04 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:43:04 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:43:04 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:43:04 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:43:04 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:43:05 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:43:05 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:43:05 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:43:05 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:43:05 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:43:05 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:43:11 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:43:11 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:43:11 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:43:11 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:43:11 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:43:11 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:43:14 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:43:14 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:43:14 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:43:14 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:43:14 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:43:14 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:43:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:43:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:43:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:43:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:43:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:43:17 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:43:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:43:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:43:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:43:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:43:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:43:20 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:44:13 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:44:13 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:44:13 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:44:13 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:44:13 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:44:13 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:44:16 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:44:16 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:44:16 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:44:16 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:44:16 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:44:16 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:44:19 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:44:19 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:44:19 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:44:19 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:44:19 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:44:19 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:44:21 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:44:21 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:44:21 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:44:21 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:44:21 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:44:21 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:44:25 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:44:25 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:44:25 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:44:25 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:44:25 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:44:25 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 12:44:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'aspek_penilaian' already exists
+[31-May-2026 12:44:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'settings' already exists
+[31-May-2026 12:44:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'min_anggota'
+[31-May-2026 12:44:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'need_mentor'
+[31-May-2026 12:44:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_penyisihan'
+[31-May-2026 12:44:30 Asia/Jakarta] [ADMIN_SCHEMA] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'has_final'
+[31-May-2026 21:41:01 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in D:\xampp\htdocs\pesoma\config\database.php:52
+Stack trace:
+#0 D:\xampp\htdocs\pesoma\config\database.php(52): PDOStatement->execute(Array)
+#1 D:\xampp\htdocs\pesoma\config\database.php(58): db_query('SELECT COUNT(*)...', Array)
+#2 D:\xampp\htdocs\pesoma\pages\beranda.php(9): db_fetch('SELECT COUNT(*)...', Array)
+#3 {main}
+  thrown in D:\xampp\htdocs\pesoma\config\database.php on line 52
+[31-May-2026 21:41:03 Asia/Jakarta] [DB_CONNECTION_ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[31-May-2026 21:41:07 Asia/Jakarta] [DB_CONNECTION_ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
