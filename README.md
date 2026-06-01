@@ -1,454 +1,158 @@
 # 📋 Portal PESOMA 2026
 
-Portal resmi **PESOMA 2026** (Pekan Seni dan Olahraga Mahasiswa) — UIN Prof. K.H. Saifuddin Zuhri Purwokerto. 
+Portal resmi **PESOMA III 2026** (Pekan Seni dan Olahraga Mahasiswa) — UIN Prof. K.H. Saifuddin Zuhri Purwokerto.
 
-Aplikasi web komprehensif untuk manajemen kompetisi seni dan olahraga mahasiswa, mencakup pendaftaran lomba, upload karya, verifikasi peserta, penjurian berbasis aspek berbobot, serta pengumuman finalis dan pemenang.
-
-**Stack:** PHP 8.2 native + MySQL/MariaDB (PDO), tanpa framework eksternal. Dirancang untuk dijalankan di XAMPP atau server Linux dengan Apache + PHP 8.2+.
+> Sistem pendaftaran, penilaian, dan publikasi 14 cabang lomba untuk 6 fakultas. Backend PHP murni + MySQL, tanpa framework JS.
 
 ---
 
-## 📌 Daftar Isi
+## 🚀 Quick Start
 
-- [Fitur Utama](#fitur-utama)
-- [Fitur per Peran](#fitur-per-peran)
-- [Struktur Folder](#struktur-folder)
-- [Persyaratan Sistem](#persyaratan-sistem)
-- [Setup & Instalasi](#setup--instalasi)
-- [Akun Default](#akun-default)
-- [Konfigurasi](#konfigurasi)
-- [Database Schema](#database-schema)
-- [Keamanan](#keamanan)
-- [API Endpoints](#api-endpoints)
-- [Cron & Tugas Terjadwal](#cron--tugas-terjadwal)
-- [Troubleshooting](#troubleshooting)
-- [Kontribusi & Lisensi](#kontribusi--lisensi)
+```bash
+# 1. Letakkan repo di htdocs XAMPP
+git clone https://github.com/genzabis/pesoma.git d:/xampp/htdocs/pesoma
+
+# 2. Import skema + seed data
+mysql -u root pesoma < sql/database.sql
+mysql -u root pesoma < sql/seeding.sql
+
+# 3. Cek konfigurasi
+# config/database.php  -> kredensial DB
+# config/config.php    -> APP_URL (http://localhost/pesoma)
+# config/constants.php -> ROLE_*, fakultas, batas upload
+
+# 4. Buka di browser
+start http://localhost/pesoma
+```
+
+Akun default admin: `admin@pesoma.local` / `AdminPesoma2026!`
 
 ---
 
-## ✨ Fitur Utama
-
-- **Manajemen Kompetisi** — Kelola cabang lomba, kategori, aspek penilaian, dan jadwal
-- **Registrasi Peserta** — Daftar individu atau tim dengan validasi NIM & email
-- **Upload Karya** — Peserta upload karya dengan tracking progress real-time
-- **Penjurian Bertingkat** — Penyisihan dan final dengan scoring berbasis aspek berbobot
-- **Verifikasi Peserta** — Panitia verifikasi dokumen dan kelengkapan peserta
-- **Pengumuman Dinamis** — Publikasi finalis, pemenang, dan berita terkait
-- **Laporan & Statistik** — Dashboard dengan grafik peserta, tim, dan hasil penilaian
-- **Backup Otomatis** — Cron job untuk backup database harian
-- **Audit Log** — Pencatatan aktivitas user untuk keamanan dan compliance
-- **Responsive Design** — Kompatibel desktop, tablet, dan mobile
-
-
-## 👥 Fitur per Peran
-
-### 🎓 Peserta
-- Daftar lomba (individu atau tim)
-- Kelola anggota tim dan pendamping
-- Upload karya dengan tracking progress
-- Lihat status verifikasi dan penilaian
-- Akses pengumuman finalis dan pemenang
-- Download juknis dan materi lomba
-
-### ⚖️ Juri
-- Penilaian babak penyisihan dan final
-- Scoring berbasis aspek berbobot
-- Riwayat penilaian dan perubahan skor
-- Export hasil penilaian
-
-### 📋 Panitia
-- Verifikasi dokumen peserta
-- Kelola jadwal kompetisi
-- Tentukan finalis berdasarkan skor
-- Input pemenang per kategori
-- Buat dan publikasikan pengumuman
-- Laporan peserta, tim, dan statistik
-
-### 🔐 Admin
-- Kelola user (peserta, juri, panitia, admin)
-- Kelola cabang lomba dan kategori
-- Atur aspek penilaian per cabang
-- Kelola jadwal dan deadline
-- Pengaturan sistem dan email
-- Audit log aktivitas user
-- Backup dan restore database
-
-### 🌐 Publik (Tanpa Login)
-- Beranda dengan informasi umum
-- Daftar dan detail cabang lomba
-- Jadwal kompetisi
-- Pengumuman finalis dan pemenang
-- Download juknis (PDF)
-- Halaman kontak dan tentang
-
-## Struktur folder
+## 🗂️ Struktur
 
 ```
 pesoma/
-├── api/          # Endpoint JSON (cek-email, cek-nim, get-jadwal, statistik, dll.)
-├── assets/       # CSS & JS bersama (css/, js/) + gambar (images/)
-├── config/       # config.php, constants.php, database.php (koneksi PDO + helper)
-├── docs/         # Dokumentasi (cron, dll.)
-├── includes/     # auth.php, session.php, functions.php, header/footer/navbar/sidebar, upload-handler.php
-├── pages/        # Halaman publik (tanpa login)
-├── public/       # uploads/ (berkas karya peserta)
-├── scripts/      # Tugas terjadwal (cron): tutup pendaftaran/upload, notifikasi, backup, dll.
-├── sql/          # database.sql (skema + seed inti) & seeding.sql (data contoh)
-├── src/          # Modul berperan: admin/, panitia/, juri/, peserta/, auth/
-└── index.php     # Redirect ke pages/beranda.php
-```
-
-## Setup
-
-1. **Letakkan project** di `htdocs` XAMPP (mis. `D:\xampp\htdocs\pesoma`).
-2. **Buat & isi database** (jalankan dari root project):
-   ```bash
-   mysql -u root pesoma_2026 < sql/database.sql
-   mysql -u root pesoma_2026 < sql/seeding.sql   # opsional: data contoh
-   ```
-   `database.sql` sudah membuat database `pesoma_2026` beserta tabel, seed 14 cabang lomba, jadwal, dan akun admin.
-3. **Konfigurasi** (opsional, default cocok untuk XAMPP lokal). Override via environment variable bila perlu:
-   `APP_ENV`, `APP_URL`, `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASS`. Lihat `config/config.php`.
-4. **Jalankan**: start Apache + MySQL di XAMPP, buka `http://localhost/pesoma/`.
-
-## Akun default
-
-| Peran   | Email                     | Password          |
-|---------|---------------------------|-------------------|
-| Admin   | `admin@pesoma.local`      | `admin`|
-| Panitia | `panitia1@pesoma.local`   | `Pesoma2026`      |
-| Juri    | `juri.seni@pesoma.local`  | `Pesoma2026`      |
-| Peserta | `ahmad@student.local`     | `Pesoma2026`      |
-
-> Akun selain admin hanya tersedia bila `sql/seeding.sql` diimpor. **Ganti semua password default sebelum production.**
-
-## Keamanan
-
-- Query memakai prepared statement (PDO, `db_query`/`db_fetch`/`db_fetch_all` di `config/database.php`).
-- Proteksi CSRF via `csrf_field()` / `verify_csrf()` (`includes/session.php`).
-- Output di-escape dengan `e()` (`includes/auth.php`).
-- Session aman: `httponly`, `samesite=Lax`, regenerasi id saat login, timeout 30 menit.
-
-## Cron / tugas terjadwal
-
-Skrip di `scripts/` (mis. `close_registration.php`, `reminder_upload.php`, `notify_finalists.php`, `backup_database.php`) dijalankan via cron/Task Scheduler. Lihat `docs/cron.md`, `scripts/crontab.example`, dan `scripts/windows-task-scheduler.example.bat`.
-
-## Catatan aset gambar
-
-Berkas berikut masih **placeholder kosong** dan perlu diisi manual (berkas biner):
-`assets/images/logo/logo-pesoma.png`, `logo-uin.png`, `favicon.ico`, dan `assets/images/banners/hero-bg.jpg`.
-
----
-
-## 💻 Persyaratan Sistem
-
-### Minimum
-- **PHP** 8.2 atau lebih tinggi
-- **MySQL** 5.7+ atau **MariaDB** 10.3+
-- **Apache** 2.4+ dengan mod_rewrite aktif
-- **Disk Space** minimal 500MB (untuk uploads)
-
-### Rekomendasi Production
-- **PHP** 8.2+ dengan extensions: `pdo_mysql`, `json`, `mbstring`, `curl`, `gd`
-- **MySQL** 8.0+ atau **MariaDB** 10.5+
-- **Apache** 2.4+ atau **Nginx** 1.18+
-- **SSL/TLS** certificate (HTTPS)
-- **Disk Space** 2GB+ (untuk uploads dan backup)
-- **RAM** minimal 2GB
-
-### Development (XAMPP)
-- XAMPP 8.2+ (PHP 8.2, MySQL 8.0, Apache 2.4)
-- Windows 10/11, macOS, atau Linux
-
----
-
-## ⚙️ Konfigurasi
-
-### File Konfigurasi Utama
-
-**`config/config.php`** — Konfigurasi aplikasi:
-```php
-define('APP_NAME', 'Portal PESOMA 2026');
-define('APP_ENV', 'development');  // 'development' atau 'production'
-define('APP_URL', 'http://localhost/pesoma');
-define('APP_TIMEZONE', 'Asia/Jakarta');
-define('SESSION_TIMEOUT', 1800);  // 30 menit
-define('UPLOAD_MAX_SIZE', 100 * 1024 * 1024);  // 100MB
-```
-
-**`config/database.php`** — Koneksi database PDO:
-```php
-define('DB_HOST', '127.0.0.1');
-define('DB_PORT', '3306');
-define('DB_NAME', 'pesoma_2026');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-```
-
-### Environment Variables (Production)
-
-Override konfigurasi via environment variable:
-```bash
-export APP_ENV=production
-export APP_URL=https://pesoma.uin-purwokerto.ac.id
-export DB_HOST=db.example.com
-export DB_NAME=pesoma_prod
-export DB_USER=pesoma_user
-export DB_PASS=secure_password_here
-```
-
-### Upload Limits
-
-Sesuaikan di `php.ini`:
-```ini
-upload_max_filesize = 100M
-post_max_size = 100M
-max_execution_time = 300
-memory_limit = 256M
+├── index.php                 # Landing → /pages/beranda.php
+├── pages/                    # Public site (Beranda, Cabang Lomba, Jadwal, dll)
+├── src/
+│   ├── auth/                 # Login, Register, Forgot Password
+│   ├── admin/                # Dashboard admin + helper _layout.php
+│   ├── panitia/              # Verifikasi peserta, finalis, pemenang, laporan
+│   ├── juri/                 # Penilaian penyisihan & final
+│   └── peserta/              # Daftar lomba, upload karya, tim, status
+├── api/                      # Endpoint JSON (statistik, pengumuman, jadwal)
+├── includes/                 # auth.php, session.php, header/footer/layout
+├── config/                   # database, constants, config
+├── assets/css/               # pesoma-public.css, dashboard-pesoma.css
+├── design/                   # Gallery preview semua halaman + preview.php
+├── public/uploads/           # Berkas peserta (artikel, ppt, video, poster)
+├── scripts/                  # Cron jobs + helper verifikasi (final-check.ps1)
+├── sql/                      # database.sql, seeding.sql, migration/
+└── storage/logs/             # Log error
 ```
 
 ---
 
-## 🗄️ Database Schema
+## 🎨 Design System
 
-### Tabel Utama
+Editorial monochrome dengan tiga blok warna aksen.
 
-| Tabel | Deskripsi |
-|-------|-----------|
-| `users` | User (peserta, juri, panitia, admin) |
-| `competitions` | Cabang lomba |
-| `aspek_penilaian` | Aspek scoring per cabang & babak |
-| `registrations` | Pendaftaran peserta |
-| `teams` | Tim peserta |
-| `mentors` | Pendamping tim |
-| `submissions` | Upload karya peserta |
-| `scores_penyisihan` | Skor babak penyisihan |
-| `scores_final` | Skor babak final |
-| `finalists` | Daftar finalis |
-| `winners` | Daftar pemenang |
-| `announcements` | Pengumuman |
-| `schedules` | Jadwal kompetisi |
-| `juri_assignments` | Penugasan juri |
-| `panitia_assignments` | Penugasan panitia |
-| `activity_logs` | Log aktivitas user |
-| `login_attempts` | Tracking login gagal |
-| `password_resets` | Token reset password |
+| Token | Nilai | Pemakaian |
+| --- | --- | --- |
+| `--c-ink` | `#0f1115` | Teks utama, primary button |
+| `--block-cream` | `#f3eadb` | Section accent (Cabang Lomba, sidebar, table header) |
+| `--block-sage` | `#d9e1cb` | Section accent (Jadwal, blok finalis) |
+| `--block-navy` | `#0c1733` | CTA section, footer informasi resmi |
+| `--ff` | Plus Jakarta Sans / Inter | Body & display |
+| `--ff-mono` | JetBrains Mono | Eyebrow, label, kode peserta |
 
-### Relasi Utama
+Dua source of truth stylesheet:
 
-```
-users (1) ──→ (M) registrations
-users (1) ──→ (M) teams
-users (1) ──→ (M) scores_penyisihan
-users (1) ──→ (M) scores_final
-competitions (1) ──→ (M) registrations
-competitions (1) ──→ (M) aspek_penilaian
-registrations (1) ──→ (M) submissions
-registrations (1) ──→ (M) finalists
-registrations (1) ──→ (M) winners
-teams (1) ──→ (M) mentors
-```
+- `assets/css/pesoma-public.css` — public site + auth pages
+- `assets/css/dashboard-pesoma.css` — 4 dashboard role (admin/panitia/juri/peserta)
+
+Komponen utama: `.btn` (pill), `.card` (flat), `.badge` (mono uppercase), `.table` (header cream), `.section-head` + `.section-eyebrow`, `.timeline`, `.list-item`.
 
 ---
 
-## 🔒 Keamanan
+## 👥 Role & Hak Akses
 
-### Proteksi Query
-- Semua query menggunakan **prepared statement** (PDO)
-- Helper: `db_query()`, `db_fetch()`, `db_fetch_all()` di `config/database.php`
-- Tidak ada string interpolation dalam SQL
+| Role | Endpoint | Fitur Utama |
+| --- | --- | --- |
+| Admin | `/src/admin/` | Kelola user, cabang lomba, aspek penilaian, jadwal, backup DB, log, pengaturan |
+| Panitia | `/src/panitia/` | Verifikasi peserta, daftar karya, tentukan finalis, input pemenang, laporan |
+| Juri | `/src/juri/` | Penilaian penyisihan/final per aspek, riwayat |
+| Peserta | `/src/peserta/` | Daftar lomba, upload karya (preview file), tim saya, status |
 
-### Proteksi CSRF
-- Token CSRF di setiap form via `csrf_field()`
-- Verifikasi token via `verify_csrf()` di `includes/session.php`
-- Token di-regenerasi setiap request
-
-### Output Escaping
-- Semua output di-escape dengan `e()` function
-- Mencegah XSS injection
-- Contoh: `<?= e($user['nama']) ?>`
-
-### Session Security
-- Cookie flag: `httponly=true`, `samesite=Lax`
-- Session timeout: 30 menit (configurable)
-- Session ID di-regenerate saat login
-- Secure flag untuk HTTPS (production)
-
-### Password Security
-- Hash: `password_hash()` dengan algo `PASSWORD_BCRYPT`
-- Verifikasi: `password_verify()`
-- Min 8 karakter, kombinasi huruf/angka/simbol (recommended)
-
-### Rate Limiting
-- Login attempts: max 5 kali, lock 15 menit
-- Tracking di tabel `login_attempts`
-
-### File Upload Security
-- Validasi MIME type
-- Rename file dengan hash
-- Simpan di folder `public/uploads/` (outside webroot recommended)
-- Proteksi `.htaccess` di `storage/`
+Auth guard: `includes/auth.php` → `require_role(ROLE_*)` di tiap layout dashboard.
 
 ---
 
-## 🔌 API Endpoints
+## 🔧 Verifikasi
 
-### Public Endpoints (Tanpa Auth)
+Script PowerShell siap pakai untuk mengetes semua jalur sekaligus:
 
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| GET | `/api/get-jadwal.php` | Daftar jadwal kompetisi |
-| GET | `/api/get-pengumuman.php` | Daftar pengumuman |
-| GET | `/api/get-finalis.php` | Daftar finalis |
-| GET | `/api/get-pemenang.php` | Daftar pemenang |
-| POST | `/api/cek-email.php` | Cek email sudah terdaftar |
-| POST | `/api/cek-nim.php` | Cek NIM sudah terdaftar |
-
-### Protected Endpoints (Require Auth)
-
-| Method | Endpoint | Deskripsi | Role |
-|--------|----------|-----------|------|
-| GET | `/api/get-statistik.php` | Statistik peserta & tim | admin, panitia |
-| POST | `/api/upload-progress.php` | Track progress upload | peserta |
-
-### Response Format
-
-**Success (200)**:
-```json
-{
-  "success": true,
-  "data": { ... },
-  "message": "OK"
-}
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/final-check.ps1
 ```
 
-**Error (400/500)**:
-```json
-{
-  "success": false,
-  "error": "Error message",
-  "code": "ERROR_CODE"
-}
-```
+Output:
+- PHP lint untuk semua file
+- 8 public pages
+- 3 auth pages
+- 26 dashboard pages (lewat `design/preview.php` auto-login dev)
+- Status `ALL CLEAR ✓` jika tidak ada error
+
+Target saat ini: **39/39 pass, 0 PHP lint error.**
 
 ---
 
-## ⏰ Cron & Tugas Terjadwal
+## 🖼️ Design Gallery
 
-### Script Cron Tersedia
+`design/index.html` — preview interaktif semua halaman dalam satu page sebagai iframe gallery, dikelompokkan per area (Public / Auth / Admin / Panitia / Juri / Peserta).
 
-| Script | Fungsi | Jadwal Rekomendasi |
-|--------|--------|-------------------|
-| `backup_database.php` | Backup database | Harian, 01:00 |
-| `close_registration.php` | Tutup pendaftaran otomatis | 15 menit sekali (saat deadline) |
-| `close_upload.php` | Tutup upload otomatis | 15 menit sekali (saat deadline) |
-| `reminder_upload.php` | Reminder upload ke peserta | Harian, 08:00 |
-| `cleanup_tokens.php` | Bersihkan token expired | Tiap jam |
-| `notify_finalists.php` | Notifikasi finalis | 15 menit sekali (hari pengumuman) |
-| `notify_winners.php` | Notifikasi pemenang | 15 menit sekali (hari pengumuman) |
-| `cleanup_temp_files.php` | Bersihkan file temp | Harian, 02:00 |
-| `generate_daily_report.php` | Generate laporan harian | Harian, 23:55 |
+`design/preview.php` — endpoint dev yang otomatis set session sebagai user pertama dengan role tertentu lalu redirect ke halaman target. Iframe dashboard menampilkan tampilan asli, bukan halaman login.
 
-### Setup Cron
+> Hanya bisa diakses dari `localhost / 127.0.0.1 / ::1`. Jangan deploy folder `design/` ke production.
 
-**Linux (crontab)**:
-```bash
-crontab -e
-# Tambahkan:
-0 1 * * * php /var/www/pesoma/scripts/backup_database.php
-0 8 * * * php /var/www/pesoma/scripts/reminder_upload.php
-```
-
-**Windows (Task Scheduler)**:
-1. Buka Task Scheduler
-2. Create Task → Actions → Program: `d:\xampp\php\php.exe`
-3. Arguments: `d:\xampp\htdocs\pesoma\scripts\backup_database.php`
-4. Atur trigger sesuai jadwal
-
-Lihat `docs/cron.md` untuk detail lengkap.
+Buka: <http://localhost/pesoma/design/index.html>
 
 ---
 
-## 🐛 Troubleshooting
+## ⏰ Cron Jobs
 
-### Database Connection Error
-**Error**: "Koneksi database gagal"
-- Pastikan MySQL/MariaDB running
-- Cek konfigurasi di `config/config.php`
-- Verifikasi username & password database
-- Cek port (default 3306)
+Lihat `docs/cron.md` dan `scripts/`:
 
-### Upload File Gagal
-**Error**: "File terlalu besar" atau "Upload gagal"
-- Cek `php.ini`: `upload_max_filesize`, `post_max_size`
-- Verifikasi folder `public/uploads/` writable
-- Cek disk space tersedia
-- Lihat log di `storage/logs/php-error.log`
+- `close_registration.php` — tutup pendaftaran setelah deadline
+- `close_upload.php` — tutup pengumpulan karya
+- `reminder_upload.php` — kirim email pengingat upload
+- `notify_finalists.php` / `notify_winners.php` — pengumuman otomatis
+- `cleanup_temp_files.php` / `cleanup_tokens.php` — housekeeping
+- `backup_database.php` — backup harian
+- `generate_daily_report.php` — laporan harian PDF/CSV
 
-### Session Timeout
-**Masalah**: Logout otomatis setelah 30 menit
-- Ubah `SESSION_TIMEOUT` di `config/config.php`
-- Pastikan server time sync dengan client
-- Cek cookie settings di browser
-
-### CSRF Token Error
-**Error**: "Token tidak valid"
-- Refresh halaman dan coba lagi
-- Clear browser cache & cookies
-- Pastikan session aktif
-- Cek `includes/session.php` untuk debug
-
-### Email Notifikasi Tidak Terkirim
-**Masalah**: Cron email tidak terkirim
-- Pastikan mail server/SMTP configured
-- Cek `CRON_MAIL_DISABLED` environment variable
-- Lihat log di `storage/logs/cron.log`
-- Untuk production, gunakan PHPMailer atau library SMTP
-
-### Permission Denied
-**Error**: "Permission denied" pada folder
-- Linux: `chmod 755 public/uploads/` dan `chmod 755 storage/logs/`
-- Windows: Pastikan user Apache punya write access
-- Cek ownership folder
+Untuk Windows: pakai `scripts/windows-task-scheduler.example.bat`.
 
 ---
 
-## 📚 Dokumentasi Tambahan
+## 🛡️ Keamanan
 
-- **Cron Setup**: Lihat `docs/cron.md`
-- **Database Schema**: Lihat `sql/database.sql`
-- **Seeding Data**: Lihat `sql/seeding.sql`
-- **Crontab Example**: Lihat `scripts/crontab.example`
-- **Windows Task Scheduler**: Lihat `scripts/windows-task-scheduler.example.bat`
-
----
-
-## 🤝 Kontribusi
-
-Kontribusi sangat diterima! Silakan:
-1. Fork repository
-2. Buat branch feature (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buat Pull Request
+- CSRF token wajib di tiap form (`csrf_field()` + `verify_csrf()`)
+- Session: `httponly`, `samesite=Lax`, timeout via `SESSION_TIMEOUT`
+- Password disimpan dengan `password_hash` BCRYPT
+- Upload divalidasi ekstensi + MIME (`finfo`) + ukuran maks
+- Pre-check uniqueness email & NIM saat tambah/edit user (mencegah PDOException 1062)
+- `design/preview.php` di-gate ke loopback only
 
 ---
 
-## 📄 Lisensi
+## 📝 Lisensi
 
-Proyek ini dilisensikan di bawah **MIT License**. Lihat file `LICENSE` untuk detail.
-
----
-
-## 📞 Support & Kontak
-
-- **Email**: admin@pesoma.local
-- **Website**: https://pesoma.uin-purwokerto.ac.id
-- **Issues**: Buat issue di repository ini
+MIT License.
 
 ---
 
-**Terakhir diupdate**: 31 Mei 2026  
-**Versi**: 1.0.0  
 **Maintained by**: Tim Pengembang PESOMA 2026
-#
+**Versi**: 2.0.0 (editorial redesign)
+**Terakhir diupdate**: 1 Juni 2026
