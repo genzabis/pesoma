@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/../includes/header.php';
-require_once __DIR__ . '/../includes/footer.php';
 
 $id = (int) ($_GET['id'] ?? 0);
 $competition = $id > 0 ? db_fetch('SELECT * FROM competitions WHERE id = ? AND is_active = 1', [$id]) : null;
@@ -11,7 +10,12 @@ $competition = $id > 0 ? db_fetch('SELECT * FROM competitions WHERE id = ? AND i
 if (!$competition) {
     http_response_code(404);
     public_header('Lomba tidak ditemukan', 'cabang-lomba.php');
-    echo '<section class="section"><div class="container"><div class="card"><h2>Cabang lomba tidak ditemukan</h2><p class="muted">Data tidak tersedia atau lomba tidak aktif.</p><a class="btn" href="cabang-lomba.php">Kembali ke Daftar Lomba</a></div></div></section>';
+    echo '<section class="hero is-page"><div class="container"><div class="hero-inner"><div class="hero-content">'
+        . '<div class="hero-eyebrow"><span class="dot"></span>404</div>'
+        . '<h1>Cabang lomba<br>tidak ditemukan.</h1>'
+        . '<p class="hero-desc">Data tidak tersedia atau lomba sudah tidak aktif.</p>'
+        . '<div class="hero-actions"><a class="btn primary" href="' . e(APP_URL) . '/pages/cabang-lomba.php">Kembali ke Daftar Lomba</a></div>'
+        . '</div></div></div></section>';
     public_footer();
     exit;
 }
@@ -21,62 +25,121 @@ $aspek = is_array($aspek) ? $aspek : [];
 
 public_header($competition['nama_lomba'], 'cabang-lomba.php');
 ?>
-<section class="hero">
-    <div class="detail-shell hero-grid">
-        <div class="hero-content">
-            <span class="eyebrow">Detail Cabang Lomba</span>
-            <h1><?= e($competition['nama_lomba']) ?></h1>
-            <p><?= e($competition['kategori'] ?: 'Umum') ?> · Kode: <?= e($competition['kode_lomba']) ?></p>
-            <div class="actions"><a class="btn" href="<?= e(APP_URL) ?>/src/auth/login.php">Daftar / Login</a><a class="btn secondary" href="cabang-lomba.php">Kembali</a></div>
-            <div class="hero-note"><span>✓ <?= e($competition['jenis']) ?></span><span>✓ <?= (int) ($competition['min_anggota'] ?? 1) ?>–<?= (int) ($competition['max_anggota'] ?? 5) ?> anggota</span><span>✓ <?= (int) ($competition['requires_mentor'] ?? 0) === 1 ? 'Pendamping wajib' : 'Pendamping opsional' ?></span></div>
-        </div>
-        <div class="hero-panel" aria-label="Highlight detail lomba">
-            <div class="hero-panel-card"><span class="hero-panel-label">Pendaftaran</span><strong><?= $competition['registration_deadline'] ? e(date('d M Y H:i', strtotime((string) $competition['registration_deadline']))) . ' WIB' : '-' ?></strong><span>Batas resmi pendaftaran cabang lomba ini.</span></div>
-            <div class="hero-panel-card"><span class="hero-panel-label">Upload Karya</span><strong><?= $competition['upload_deadline'] ? e(date('d M Y H:i', strtotime((string) $competition['upload_deadline']))) . ' WIB' : '-' ?></strong><span>Pastikan karya diunggah sebelum batas waktu.</span></div>
+
+<!-- Hero -->
+<section class="hero is-page">
+    <div class="container">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-eyebrow"><span class="dot"></span>Detail Cabang · Kode <?= e($competition['kode_lomba']) ?></div>
+                <h1><?= e($competition['nama_lomba']) ?>.</h1>
+                <p class="hero-desc">
+                    <?= e($competition['kategori'] ?: 'Umum') ?> · <?= e($competition['jenis']) ?>.
+                    Tim <?= (int) ($competition['min_anggota'] ?? 1) ?>–<?= (int) ($competition['max_anggota'] ?? 5) ?> orang ·
+                    Pendamping <?= (int) ($competition['requires_mentor'] ?? 0) === 1 ? 'wajib' : 'tidak wajib' ?>.
+                </p>
+                <div class="hero-actions">
+                    <a href="<?= e(APP_URL) ?>/src/auth/register.php" class="btn primary">Daftar Sekarang</a>
+                    <a href="<?= e(APP_URL) ?>/pages/cabang-lomba.php" class="btn secondary">← Semua Cabang</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<!-- Quick Info Stats -->
+<section class="section" style="padding: 0;">
+    <div class="container">
+        <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="stat">
+                <span class="stat-value"><?= (int) ($competition['min_anggota'] ?? 1) ?>–<?= (int) ($competition['max_anggota'] ?? 5) ?></span>
+                <span class="stat-label">Anggota Tim</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value"><?= (int) ($competition['requires_mentor'] ?? 0) === 1 ? 'Wajib' : '—' ?></span>
+                <span class="stat-label">Pendamping</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value"><?= e($competition['kode_lomba']) ?></span>
+                <span class="stat-label">Kode Lomba</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value"><?= count($aspek) ?: '—' ?></span>
+                <span class="stat-label">Aspek Penilaian</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Deskripsi & Aturan -->
 <section class="section">
-    <div class="detail-shell">
-        <article class="card" style="margin-bottom:18px">
-            <h3>Deskripsi</h3>
-            <p><?= nl2br(e((string) ($competition['deskripsi'] ?? '-'))) ?></p>
-            <h3>Ketentuan</h3>
-            <p><?= nl2br(e((string) ($competition['aturan'] ?? '-'))) ?></p>
-            <p class="muted">
-                Anggota: <?= (int) ($competition['min_anggota'] ?? 1) ?>–<?= (int) ($competition['max_anggota'] ?? 5) ?> orang ·
-                Pendamping: <?= (int) ($competition['requires_mentor'] ?? 0) === 1 ? 'Wajib' : 'Tidak wajib' ?>
-            </p>
-        </article>
+    <div class="container" style="max-width: 820px;">
+        <div class="section-head">
+            <span class="section-eyebrow">Deskripsi Lomba</span>
+            <h2 class="section-title">Apa yang dilombakan.</h2>
+        </div>
+        <p style="font-size: 17px; line-height: 1.7; color: var(--c-ink-soft);"><?= nl2br(e((string) ($competition['deskripsi'] ?? '—'))) ?></p>
 
-        <?php if ($aspek): ?>
-            <article class="card" style="margin-bottom:18px">
-                <h3>Aspek Penilaian</h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Aspek</th>
-                            <th>Bobot</th>
-                        </tr>
-                    </thead>
-                    <tbody><?php foreach ($aspek as $row): ?><tr>
-                                <td><?= e((string) ($row['nama'] ?? '-')) ?></td>
-                                <td><?= e((string) ($row['bobot'] ?? '-')) ?>%</td>
-                            </tr><?php endforeach; ?></tbody>
-                </table>
-            </article>
-        <?php endif; ?>
-
-        <article class="card">
-            <h3>Jadwal Penting</h3>
-            <p><b>Batas Pendaftaran:</b> <?= $competition['registration_deadline'] ? e(date('d M Y H:i', strtotime((string) $competition['registration_deadline']))) . ' WIB' : '-' ?></p>
-            <p><b>Batas Upload Karya:</b> <?= $competition['upload_deadline'] ? e(date('d M Y H:i', strtotime((string) $competition['upload_deadline']))) . ' WIB' : '-' ?></p>
-            <?php if (!empty($competition['juknis_file'])): ?>
-                <a class="btn secondary" href="<?= e(APP_URL) ?>/storage/juknis/<?= e((string) $competition['juknis_file']) ?>">Unduh Juknis</a>
-            <?php endif; ?>
-            <a class="btn" href="<?= e(APP_URL) ?>/src/auth/login.php">Daftar / Login</a>
-            <a class="btn secondary" href="cabang-lomba.php">Kembali</a>
-        </article>
+        <div class="section-head" style="margin-top: 72px;">
+            <span class="section-eyebrow">Ketentuan</span>
+            <h2 class="section-title">Aturan & ketentuan tim.</h2>
+        </div>
+        <p style="font-size: 16px; line-height: 1.7; color: var(--c-ink-soft);"><?= nl2br(e((string) ($competition['aturan'] ?? '—'))) ?></p>
     </div>
 </section>
+
+<?php if ($aspek): ?>
+<!-- Aspek Penilaian (cream) -->
+<section class="section is-cream">
+    <div class="container" style="max-width: 820px;">
+        <div class="section-head">
+            <span class="section-eyebrow">Bobot Penilaian</span>
+            <h2 class="section-title">Aspek penilaian<br>juri.</h2>
+            <p class="section-desc">Setiap aspek punya bobot persentase tertentu. Total seluruh bobot 100%.</p>
+        </div>
+        <div class="list">
+            <?php foreach ($aspek as $item): ?>
+                <div class="list-item">
+                    <div class="list-item-content">
+                        <span class="list-item-title"><?= e($item['aspek'] ?? '—') ?></span>
+                    </div>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600; color: var(--c-ink); letter-spacing: -.01em;"><?= (int) ($item['bobot'] ?? 0) ?>%</span>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
+
+<!-- Batas Waktu (sage) -->
+<section class="section is-sage">
+    <div class="container" style="max-width: 820px;">
+        <div class="section-head">
+            <span class="section-eyebrow">Tanggal Penting</span>
+            <h2 class="section-title">Deadline pendaftaran<br>dan upload karya.</h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span>Pendaftaran</span>
+                <strong><?= $competition['registration_deadline'] ? e(date('d M Y', strtotime((string) $competition['registration_deadline']))) : 'Belum ditentukan' ?></strong>
+                <p><?= $competition['registration_deadline'] ? e(date('H:i', strtotime((string) $competition['registration_deadline']))) . ' WIB' : '—' ?></p>
+            </div>
+            <div class="timeline-item">
+                <span>Upload Karya</span>
+                <strong><?= $competition['upload_deadline'] ? e(date('d M Y', strtotime((string) $competition['upload_deadline']))) : 'Belum ditentukan' ?></strong>
+                <p><?= $competition['upload_deadline'] ? e(date('H:i', strtotime((string) $competition['upload_deadline']))) . ' WIB' : '—' ?></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Tertarik ikut<br><?= e($competition['nama_lomba']) ?>?</h2>
+        <p>Buat akun, susun tim, lalu ikuti tahap pendaftaran sebelum deadline yang tertera di atas.</p>
+        <a href="<?= e(APP_URL) ?>/src/auth/register.php" class="btn primary">Daftar Sekarang</a>
+    </div>
+</section>
+
 <?php public_footer(); ?>

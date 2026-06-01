@@ -6,7 +6,7 @@ require_once __DIR__ . '/_layout.php';
 
 $defaults = [
     'site_title' => APP_NAME,
-    'event_theme' => 'Pekan Seni dan Olahraga Mahasiswa 2026',
+        'event_theme' => 'Pekan Seni dan Inovasi Mahasiswa (PESOMA) III Tahun 2026',
     'registration_open' => '1',
     'upload_open' => '1',
     'tm_checkin_open' => '0',

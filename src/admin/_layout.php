@@ -47,549 +47,113 @@ function admin_header(string $title, string $active = ''): void
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="theme-color" content="#0f172a">
-        <title><?= e($title) ?> - <?= e(APP_NAME) ?></title>
+        <meta name="theme-color" content="#0c1733">
+        <title><?= e($title) ?> — <?= e(APP_NAME) ?></title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <style>
-            :root {
-                --primary: #1a9d6e;
-                --primary-dark: #0f7a52;
-                --primary-light: #2fb87f;
-                --accent: #c99a2e;
-                --accent-light: #f3c969;
-                --bg-primary: #f5f8f6;
-                --bg-secondary: #fbfdfb;
-                --text-primary: #132019;
-                --text-secondary: #647268;
-                --border: #dfe8e2;
-                --shadow-sm: 0 2px 8px rgba(15, 81, 50, .08);
-                --shadow-md: 0 8px 24px rgba(15, 81, 50, .12);
-                --shadow-lg: 0 24px 70px rgba(15, 81, 50, .14);
-                --shadow-xl: 0 34px 90px rgba(7, 53, 31, .24);
-                --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                --danger: #b91c1c;
-                --warn: #92400e;
-                --ok: #166534;
-                --blue: #1d4ed8;
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            html {
-                scroll-behavior: smooth;
-            }
-
-            body {
-                margin: 0;
-                font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-                font-size: 15px;
-                color: var(--text-primary);
-                background: linear-gradient(180deg, #fcfdfc 0%, #f4f8f6 52%, #eef5f1 100%);
-                line-height: 1.65;
-            }
-
-            .app {
-                display: grid;
-                grid-template-columns: 280px 1fr;
-                min-height: 100vh;
-            }
-
-            .sidebar {
-                background: linear-gradient(180deg, var(--primary), #07351f);
-                color: #fff;
-                padding: 28px 20px;
-                position: sticky;
-                top: 0;
-                height: 100vh;
-                overflow-y: auto;
-                box-shadow: 2px 0 12px rgba(15, 81, 50, .12);
-            }
-
-            .brand {
-                font-size: 20px;
-                font-weight: 900;
-                margin-bottom: 8px;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-            }
-
-            .brand i {
-                font-size: 24px;
-            }
-
-            .role {
-                opacity: .85;
-                margin-bottom: 28px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .02em;
-            }
-
-            .nav {
-                display: grid;
-                gap: 6px;
-            }
-
-            .nav a {
-                color: rgba(255, 255, 255, .9);
-                text-decoration: none;
-                padding: 11px 14px;
-                border-radius: 12px;
-                font-weight: 700;
-                font-size: 14px;
-                transition: var(--transition);
-                display: flex;
-                align-items: center;
-                gap: 8px;
-            }
-
-            .nav a:hover {
-                background: rgba(255, 255, 255, .15);
-                color: #fff;
-            }
-
-            .nav a.active {
-                background: rgba(255, 255, 255, .2);
-                color: #fff;
-                font-weight: 800;
-            }
-
-            .main {
-                padding: 32px;
-                overflow-y: auto;
-            }
-
-            .topbar {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 16px;
-                margin-bottom: 28px;
-            }
-
-            .topbar h1 {
-                margin: 0;
-                color: var(--primary);
-                font-size: 28px;
-                font-weight: 900;
-                letter-spacing: -.02em;
-            }
-
-            .user-chip {
-                background: rgba(255, 255, 255, .96);
-                border: 1px solid var(--border);
-                border-radius: 12px;
-                padding: 10px 16px;
-                font-weight: 700;
-                font-size: 14px;
-                color: var(--text-primary);
-                box-shadow: 0 4px 12px rgba(15, 81, 50, .08);
-            }
-
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(12, 1fr);
-                gap: 20px;
-            }
-
-            .card {
-                background: rgba(255, 255, 255, .96);
-                border: 1px solid rgba(15, 81, 50, .08);
-                border-radius: 16px;
-                padding: 24px;
-                box-shadow: 0 4px 16px rgba(15, 81, 50, .06);
-                transition: var(--transition);
-                margin-bottom: 0;
-                overflow: auto;
-            }
-
-            .card:hover {
-                box-shadow: 0 8px 24px rgba(15, 81, 50, .1);
-            }
-
-            .span-3 {
-                grid-column: span 3;
-            }
-
-            .span-4 {
-                grid-column: span 4;
-            }
-
-            .span-6 {
-                grid-column: span 6;
-            }
-
-            .span-8 {
-                grid-column: span 8;
-            }
-
-            .span-12 {
-                grid-column: span 12;
-            }
-
-            .card h2,
-            .card h3 {
-                margin-top: 0;
-                color: var(--primary);
-                font-weight: 800;
-            }
-
-            .card h2 {
-                font-size: 22px;
-            }
-
-            .card h3 {
-                font-size: 18px;
-            }
-
-            .muted {
-                color: var(--text-secondary);
-                font-size: 14px;
-            }
-
-            .stat {
-                font-size: 36px;
-                font-weight: 900;
-                color: var(--primary);
-            }
-
-            .btn {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                gap: 6px;
-                border: none;
-                border-radius: 12px;
-                background: var(--primary);
-                color: #fff;
-                padding: 11px 18px;
-                font-weight: 800;
-                font-size: 14px;
-                text-decoration: none;
-                cursor: pointer;
-                transition: var(--transition);
-                box-shadow: 0 4px 12px rgba(15, 81, 50, .16);
-            }
-
-            .btn:hover {
-                background: #1a7c52;
-                transform: translateY(-2px);
-                box-shadow: 0 6px 16px rgba(15, 81, 50, .22);
-            }
-
-            .btn:active {
-                transform: translateY(0);
-            }
-
-            .btn.secondary {
-                background: rgba(15, 81, 50, .08);
-                color: var(--primary);
-                box-shadow: none;
-            }
-
-            .btn.secondary:hover {
-                background: rgba(15, 81, 50, .14);
-            }
-
-            .btn.danger {
-                background: #fee2e2;
-                color: var(--danger);
-                box-shadow: none;
-            }
-
-            .btn.danger:hover {
-                background: #fecaca;
-            }
-
-            .btn.warn {
-                background: #fef3c7;
-                color: var(--warn);
-                box-shadow: none;
-            }
-
-            .btn.warn:hover {
-                background: #fde68a;
-            }
-
-            .btn.small {
-                padding: 8px 12px;
-                font-size: 13px;
-            }
-
-            .alert {
-                padding: 14px 16px;
-                border-radius: 12px;
-                margin: 0 0 16px;
-                font-weight: 700;
-                font-size: 14px;
-                border: 1px solid;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .alert.success {
-                background: #dcfce7;
-                color: var(--ok);
-                border-color: #bbf7d0;
-            }
-
-            .alert.error {
-                background: #fee2e2;
-                color: var(--danger);
-                border-color: #fecaca;
-            }
-
-            .badge {
-                display: inline-block;
-                border-radius: 8px;
-                padding: 6px 12px;
-                font-weight: 800;
-                font-size: 12px;
-                letter-spacing: .01em;
-            }
-
-            .badge.ok {
-                background: #dcfce7;
-                color: var(--ok);
-            }
-
-            .badge.no {
-                background: #fee2e2;
-                color: var(--danger);
-            }
-
-            .badge.info {
-                background: #dbeafe;
-                color: var(--blue);
-            }
-
-            .table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-
-            .table th,
-            .table td {
-                padding: 12px;
-                border-bottom: 1px solid var(--border);
-                text-align: left;
-                vertical-align: top;
-            }
-
-            .table th {
-                color: var(--primary);
-                background: rgba(15, 81, 50, .04);
-                font-weight: 800;
-                font-size: 13px;
-            }
-
-            .table td {
-                font-size: 14px;
-            }
-
-            .field {
-                margin-bottom: 16px;
-            }
-
-            .field label {
-                display: block;
-                font-weight: 800;
-                color: var(--primary);
-                margin-bottom: 8px;
-                font-size: 14px;
-            }
-
-            .field input,
-            .field select,
-            .field textarea {
-                width: 100%;
-                padding: 12px 14px;
-                border: 1px solid var(--border);
-                border-radius: 12px;
-                background: rgba(255, 255, 255, .6);
-                font-family: inherit;
-                font-size: 14px;
-                transition: var(--transition);
-            }
-
-            .field input:focus,
-            .field select:focus,
-            .field textarea:focus {
-                outline: none;
-                border-color: var(--primary);
-                background: #fff;
-                box-shadow: 0 0 0 3px rgba(15, 81, 50, .1);
-            }
-
-            .actions {
-                display: flex;
-                gap: 12px;
-                flex-wrap: wrap;
-                align-items: center;
-                margin-top: 16px;
-            }
-
-            .filters {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr) auto;
-                gap: 12px;
-                align-items: end;
-            }
-
-            .two {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 14px;
-            }
-
-            @media(max-width: 1024px) {
-                .app {
-                    grid-template-columns: 1fr;
-                }
-
-                .sidebar {
-                    position: static;
-                    height: auto;
-                    padding: 20px;
-                }
-
-                .main {
-                    padding: 24px;
-                }
-
-                .span-3,
-                .span-4,
-                .span-6,
-                .span-8 {
-                    grid-column: span 12;
-                }
-
-                .topbar,
-                .filters,
-                .two {
-                    grid-template-columns: 1fr;
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-
-                .topbar h1 {
-                    font-size: 24px;
-                }
-            }
-
-            @media(max-width: 640px) {
-                .main {
-                    padding: 16px;
-                }
-
-                .grid {
-                    gap: 16px;
-                }
-
-                .card {
-                    padding: 16px;
-                }
-
-                .topbar h1 {
-                    font-size: 20px;
-                }
-            }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="<?= e(APP_URL) ?>/assets/css/dashboard-pesoma.css?v=3">
     </head>
 
     <body>
         <div class="app">
             <aside class="sidebar">
-                <div class="brand"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> PESOMA 2026</div>
+                <div class="brand"><span>PESOMA III</span></div>
                 <div class="role">Panel Admin</div>
-                <nav class="nav"><?php foreach (admin_nav_items() as $href => $label): ?><a class="<?= basename($href) === $active ? 'active' : '' ?>" href="<?= e($href) ?>"><i class="<?= e(admin_nav_icon($href)) ?>" aria-hidden="true"></i><span><?= e($label) ?></span></a><?php endforeach; ?></nav>
+                <nav class="nav">
+                    <?php foreach (admin_nav_items() as $href => $label): ?>
+                        <a class="<?= basename($href) === $active ? 'active' : '' ?>" href="<?= e($href) ?>"><i class="<?= e(admin_nav_icon($href)) ?>" aria-hidden="true"></i><span><?= e($label) ?></span></a>
+                    <?php endforeach; ?>
+                </nav>
+                <div class="sidebar-footer">UIN SAIZU · 2026</div>
             </aside>
             <main class="main">
                 <div class="topbar">
-                    <h1><?= e($title) ?></h1>
+                    <div>
+                        <span class="topbar-eyebrow">Admin</span>
+                        <h1><?= e($title) ?></h1>
+                    </div>
                     <div class="user-chip"><?= e($_SESSION['user']['nama'] ?? 'Admin') ?></div>
-                </div><?php if ($msg = flash('success')): ?><div class="alert success"><?= e($msg) ?></div><?php endif; ?><?php if ($msg = flash('error')): ?><div class="alert error"><?= e($msg) ?></div><?php endif; ?>
+                </div>
+                <?php if ($msg = flash('success')): ?><div class="alert success"><?= e($msg) ?></div><?php endif; ?>
+                <?php if ($msg = flash('error')): ?><div class="alert error"><?= e($msg) ?></div><?php endif; ?>
             <?php
-        }
+}
 
-        function admin_footer(): void
-        {
-            echo '</main></div></body></html>';
-        }
-        function admin_id(): int
-        {
-            return (int)($_SESSION['user']['id'] ?? 0);
-        }
-        function admin_redirect(string $path): never
-        {
-            redirect($path);
-        }
+function admin_footer(): void
+{
+    echo '</main></div></body></html>';
+}
 
-        function admin_table_exists(string $table): bool
-        {
-            try {
-                return (bool) db_fetch('SHOW TABLES LIKE ?', [$table]);
-            } catch (Throwable $e) {
-                return false;
-            }
-        }
+function admin_id(): int
+{
+    return (int)($_SESSION['user']['id'] ?? 0);
+}
 
-        function admin_column_exists(string $table, string $column): bool
-        {
-            try {
-                return (bool) db_fetch("SHOW COLUMNS FROM `$table` LIKE ?", [$column]);
-            } catch (Throwable $e) {
-                return false;
-            }
-        }
+function admin_redirect(string $path): never
+{
+    redirect($path);
+}
 
-        function admin_exec_safe(string $sql): void
-        {
-            try {
-                db()->exec($sql);
-            } catch (Throwable $e) {
-                error_log('[ADMIN_SCHEMA] ' . $e->getMessage());
-            }
-        }
+function admin_table_exists(string $table): bool
+{
+    try {
+        return (bool) db_fetch('SHOW TABLES LIKE ?', [$table]);
+    } catch (Throwable $e) {
+        return false;
+    }
+}
 
-        function admin_ensure_schema(): void
-        {
-            if (!admin_table_exists('aspek_penilaian')) {
-                admin_exec_safe("CREATE TABLE aspek_penilaian (id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT, competition_id BIGINT UNSIGNED NOT NULL, babak ENUM('penyisihan','final') NOT NULL, aspek_name VARCHAR(160) NOT NULL, nama_aspek VARCHAR(160) GENERATED ALWAYS AS (aspek_name) VIRTUAL, bobot_persen DECIMAL(5,2) NOT NULL DEFAULT 0, bobot DECIMAL(5,2) GENERATED ALWAYS AS (bobot_persen) VIRTUAL, urutan INT UNSIGNED NOT NULL DEFAULT 1, created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP, PRIMARY KEY(id), KEY idx_aspek_comp_babak (competition_id,babak), CONSTRAINT fk_aspek_competition FOREIGN KEY (competition_id) REFERENCES competitions(id) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
-            }
-            if (!admin_table_exists('settings')) {
-                admin_exec_safe("CREATE TABLE settings (setting_key VARCHAR(100) NOT NULL, setting_value TEXT NULL, updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP, PRIMARY KEY(setting_key)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
-            }
-            foreach (
-                [
-                    'min_anggota' => 'ALTER TABLE competitions ADD min_anggota TINYINT UNSIGNED NOT NULL DEFAULT 1 AFTER kategori',
-                    'need_mentor' => 'ALTER TABLE competitions ADD need_mentor TINYINT(1) NOT NULL DEFAULT 0 AFTER max_anggota',
-                    'has_penyisihan' => 'ALTER TABLE competitions ADD has_penyisihan TINYINT(1) NOT NULL DEFAULT 1 AFTER need_mentor',
-                    'has_final' => 'ALTER TABLE competitions ADD has_final TINYINT(1) NOT NULL DEFAULT 1 AFTER has_penyisihan',
-                ] as $col => $sql
-            ) {
-                if (!admin_column_exists('competitions', $col)) admin_exec_safe($sql);
-            }
-        }
+function admin_column_exists(string $table, string $column): bool
+{
+    try {
+        return (bool) db_fetch("SHOW COLUMNS FROM `$table` LIKE ?", [$column]);
+    } catch (Throwable $e) {
+        return false;
+    }
+}
 
-        function admin_setting(string $key, string $default = ''): string
-        {
-            admin_ensure_schema();
-            $row = db_fetch('SELECT setting_value FROM settings WHERE setting_key=?', [$key]);
-            return (string)($row['setting_value'] ?? $default);
-        }
+function admin_exec_safe(string $sql): void
+{
+    try {
+        db()->exec($sql);
+    } catch (Throwable $e) {
+        error_log('[ADMIN_SCHEMA] ' . $e->getMessage());
+    }
+}
 
-        function admin_save_setting(string $key, string $value): void
-        {
-            admin_ensure_schema();
-            db_query('INSERT INTO settings (setting_key,setting_value) VALUES (?,?) ON DUPLICATE KEY UPDATE setting_value=VALUES(setting_value), updated_at=CURRENT_TIMESTAMP', [$key, $value]);
-        }
+function admin_ensure_schema(): void
+{
+    if (!admin_table_exists('aspek_penilaian')) {
+        admin_exec_safe("CREATE TABLE aspek_penilaian (id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT, competition_id BIGINT UNSIGNED NOT NULL, babak ENUM('penyisihan','final') NOT NULL, aspek_name VARCHAR(160) NOT NULL, nama_aspek VARCHAR(160) GENERATED ALWAYS AS (aspek_name) VIRTUAL, bobot_persen DECIMAL(5,2) NOT NULL DEFAULT 0, bobot DECIMAL(5,2) GENERATED ALWAYS AS (bobot_persen) VIRTUAL, urutan INT UNSIGNED NOT NULL DEFAULT 1, created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP, PRIMARY KEY(id), KEY idx_aspek_comp_babak (competition_id,babak), CONSTRAINT fk_aspek_competition FOREIGN KEY (competition_id) REFERENCES competitions(id) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+    }
+    if (!admin_table_exists('settings')) {
+        admin_exec_safe("CREATE TABLE settings (setting_key VARCHAR(100) NOT NULL, setting_value TEXT NULL, updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP, PRIMARY KEY(setting_key)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+    }
+    foreach (
+        [
+            'min_anggota' => 'ALTER TABLE competitions ADD min_anggota TINYINT UNSIGNED NOT NULL DEFAULT 1 AFTER kategori',
+            'need_mentor' => 'ALTER TABLE competitions ADD need_mentor TINYINT(1) NOT NULL DEFAULT 0 AFTER max_anggota',
+            'has_penyisihan' => 'ALTER TABLE competitions ADD has_penyisihan TINYINT(1) NOT NULL DEFAULT 1 AFTER need_mentor',
+            'has_final' => 'ALTER TABLE competitions ADD has_final TINYINT(1) NOT NULL DEFAULT 1 AFTER has_penyisihan',
+        ] as $col => $sql
+    ) {
+        if (!admin_column_exists('competitions', $col)) admin_exec_safe($sql);
+    }
+}
 
-        admin_ensure_schema();
+function admin_setting(string $key, string $default = ''): string
+{
+    admin_ensure_schema();
+    $row = db_fetch('SELECT setting_value FROM settings WHERE setting_key=?', [$key]);
+    return (string)($row['setting_value'] ?? $default);
+}
+
+function admin_save_setting(string $key, string $value): void
+{
+    admin_ensure_schema();
+    db_query('INSERT INTO settings (setting_key,setting_value) VALUES (?,?) ON DUPLICATE KEY UPDATE setting_value=VALUES(setting_value), updated_at=CURRENT_TIMESTAMP', [$key, $value]);
+}
+
+admin_ensure_schema();

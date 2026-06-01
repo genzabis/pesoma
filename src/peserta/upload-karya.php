@@ -109,20 +109,133 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $submission = $registration ? db_fetch('SELECT * FROM submissions WHERE registration_id = ?', [$selectedRegId]) : null;
+$existingPaths     = $submission ? (json_decode((string) ($submission['file_paths'] ?? '{}'), true) ?: []) : [];
+$existingOriginals = $submission ? (json_decode((string) ($submission['original_names'] ?? '{}'), true) ?: []) : [];
+
+function preview_kind_for(string $path): string
+{
+    $ext = strtolower(pathinfo($path, PATHINFO_EXTENSION));
+    if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp'], true)) return 'image';
+    if (in_array($ext, ['mp4', 'webm', 'mov'], true)) return 'video';
+    if ($ext === 'pdf') return 'pdf';
+    return 'file';
+}
+
+function preview_icon_for(string $kind): string
+{
+    return match ($kind) {
+        'image' => 'fa-image',
+        'video' => 'fa-video',
+        'pdf'   => 'fa-file-pdf',
+        default => 'fa-file',
+    };
+}
+
 peserta_header('Upload Karya', 'upload-karya.php');
 foreach ($errors as $error) echo '<div class="alert error">' . e($error) . '</div>';
 ?>
-<section class="card">
-    <?php if (!$registrations): ?><p class="muted">Anda belum mendaftar lomba. Silakan daftar lomba terlebih dahulu.</p><a class="btn" href="daftar-lomba.php">Daftar Lomba</a><?php else: ?>
-        <form method="POST" enctype="multipart/form-data">
-            <?= csrf_field() ?>
-            <div class="field"><label>Pilih Pendaftaran</label><select name="registration_id" onchange="location.href='upload-karya.php?registration_id='+this.value"><?php foreach ($registrations as $reg): ?><option value="<?= (int) $reg['id'] ?>" <?= $selectedRegId === (int) $reg['id'] ? 'selected' : '' ?>><?= e($reg['nama_lomba']) ?> - <?= e($reg['nomor_peserta']) ?></option><?php endforeach; ?></select></div>
-            <?php if ($registration): ?><p>Batas upload: <span class="deadline"><?= e(date('d M Y H:i', strtotime($registration['upload_deadline']))) ?> WIB</span></p><?php foreach (upload_fields_for($registration) as $field => $exts): ?><div class="field"><label><?= e(ucfirst($field)) ?> (<?= e(implode(', ', $exts)) ?>)</label><input type="file" name="<?= e($field) ?>"></div><?php endforeach; ?><button class="btn" type="submit">Upload Karya</button><?php endif; ?>
-        </form>
-        <?php if ($submission): ?>
-            <hr>
+
+<div class="section-head">
+    <span class="section-eyebrow">Pengumpulan Karya</span>
+    <h2 class="section-title">Upload karya lomba.</h2>
+</div>
+
+<?php if (!$registrations): ?>
+    <section class="card">
+        <p class="muted" style="margin: 0 0 16px;">Anda belum mendaftar pada lomba apa pun. Daftar dulu untuk bisa mengunggah karya.</p>
+        <a class="btn" href="daftar-lomba.php">Daftar Lomba</a>
+    </section>
+<?php else: ?>
+
+    <div class="grid">
+        <section class="card span-8">
+            <h3>Form Pengumpulan</h3>
+            <form method="POST" enctype="multipart/form-data">
+                <?= csrf_field() ?>
+
+                <div class="field">
+                    <label>Pilih Pendaftaran</label>
+                    <select name="registration_id" onchange="location.href='upload-karya.php?registration_id='+this.value">
+                        <?php foreach ($registrations as $reg): ?>
+                            <option value="<?= (int) $reg['id'] ?>" <?= $selectedRegId === (int) $reg['id'] ? 'selected' : '' ?>>
+                                <?= e($reg['nama_lomba']) ?> · <?= e($reg['nomor_peserta']) ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
+                <?php if ($registration): ?>
+                    <?php $deadline = strtotime((string) $registration['upload_deadline']); $now = time(); $expired = $deadline && $now > $deadline; ?>
+                    <div class="alert <?= $expired ? 'error' : 'info' ?>" style="margin-bottom: 18px;">
+                        <strong>Batas upload:</strong>&nbsp;<?= e(date('d M Y H:i', $deadline)) ?> WIB
+                        <?php if ($expired): ?>· <span>Deadline sudah lewat</span><?php endif; ?>
+                    </div>
+
+                    <?php foreach (upload_fields_for($registration) as $field => $exts): ?>
+                        <div class="field">
+                            <label><?= e(ucfirst($field)) ?>
+                                <span style="font-family: var(--ff-mono); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .12em; color: var(--c-ink-mute); margin-left: 8px;">
+                                    <?= e(implode(' · ', $exts)) ?>
+                                </span>
+                            </label>
+                            <input type="file" name="<?= e($field) ?>" accept=".<?= e(implode(',.', $exts)) ?>">
+                            <?php if (!empty($existingOriginals[$field])): ?>
+                                <div style="margin-top: 6px; font-size: 12px; color: var(--c-ink-mute);">
+                                    Sudah terunggah: <strong style="color: var(--c-ink);"><?= e($existingOriginals[$field]) ?></strong>. Pilih file baru untuk mengganti.
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
+
+                    <button class="btn" type="submit"><i class="fa-solid fa-cloud-arrow-up"></i> Upload / Perbarui Karya</button>
+                <?php endif; ?>
+            </form>
+        </section>
+
+        <section class="card span-4">
             <h3>File Terunggah</h3>
-            <pre><?= e(json_encode(json_decode($submission['original_names'] ?: '{}', true), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)) ?></pre><?php endif; ?>
-    <?php endif; ?>
-</section>
+            <?php if (!$existingPaths): ?>
+                <p class="muted" style="margin: 0;">Belum ada file yang diupload untuk pendaftaran ini.</p>
+            <?php else: ?>
+                <div style="display: grid; gap: 14px;">
+                    <?php foreach ($existingPaths as $field => $path): ?>
+                        <?php
+                        $kind = preview_kind_for((string) $path);
+                        $url  = e(APP_URL . '/' . $path);
+                        $name = e($existingOriginals[$field] ?? basename((string) $path));
+                        ?>
+                        <div style="border: 1px solid var(--c-line); border-radius: 12px; overflow: hidden;">
+                            <div style="aspect-ratio: 16/10; background: #fafafa; display: grid; place-items: center; overflow: hidden;">
+                                <?php if ($kind === 'image'): ?>
+                                    <img src="<?= $url ?>" alt="<?= $name ?>" style="width: 100%; height: 100%; object-fit: cover;">
+                                <?php elseif ($kind === 'video'): ?>
+                                    <video src="<?= $url ?>" controls preload="metadata" style="width: 100%; height: 100%; object-fit: cover; background: #000;"></video>
+                                <?php elseif ($kind === 'pdf'): ?>
+                                    <iframe src="<?= $url ?>#toolbar=0" style="width: 100%; height: 100%; border: 0;"></iframe>
+                                <?php else: ?>
+                                    <i class="fa-solid <?= e(preview_icon_for($kind)) ?>" style="font-size: 38px; color: var(--c-ink-mute);"></i>
+                                <?php endif; ?>
+                            </div>
+                            <div style="padding: 10px 12px;">
+                                <div style="font-family: var(--ff-mono); font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: var(--c-ink-mute); margin-bottom: 2px;"><?= e($field) ?></div>
+                                <div style="font-size: 13px; font-weight: 600; word-break: break-word;"><?= $name ?></div>
+                                <div style="margin-top: 8px; display: flex; gap: 8px;">
+                                    <a class="btn small secondary" href="<?= $url ?>" target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i> Buka</a>
+                                    <a class="btn small secondary" href="<?= $url ?>" download><i class="fa-solid fa-download"></i> Unduh</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <?php if (!empty($submission['uploaded_at'])): ?>
+                    <p class="muted" style="margin: 16px 0 0; font-family: var(--ff-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .12em;">
+                        Terakhir diunggah: <?= e(date('d M Y H:i', strtotime((string) $submission['uploaded_at']))) ?> WIB
+                    </p>
+                <?php endif; ?>
+            <?php endif; ?>
+        </section>
+    </div>
+
+<?php endif; ?>
+
 <?php peserta_footer(); ?>

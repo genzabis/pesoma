@@ -1,1959 +1,262 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1e1e1e" />
-    <title>PESOMA 2026 — UI Design System & Screens (Canvas Preview)</title>
-    <meta
-      name="description"
-      content="Portal resmi PESOMA 2026 UIN Prof. K.H. Saifuddin Zuhri Purwokerto — Preview figma-ready frame untuk import ke design editor."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css?v=4" />
-  </head>
 
-  <body>
-    <!-- Figma-style Fixed Toolbar -->
-    <div class="figma-canvas-header" aria-label="Toolbar Figma Canvas">
-      <div class="figma-toolbar-left">
-        <div class="figma-logo">
-          <span class="figma-logo-f">F</span>
-          <span>PESOMA 2026</span>
-        </div>
-        <div class="figma-tools" role="toolbar" aria-label="Tools">
-          <button class="active" aria-label="Selection Tool"><i class="fa-solid fa-arrow-pointer"></i> Select</button>
-          <button aria-label="Frame Tool"><i class="fa-regular fa-square"></i> Frame</button>
-          <button aria-label="Text Tool"><i class="fa-solid fa-font"></i> Text</button>
-          <button aria-label="Hand Tool"><i class="fa-solid fa-hand"></i> Hand</button>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PESOMA III â€” Design Gallery (All Pages)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="design-canvas">
+  <!-- TOP BAR -->
+  <header class="dg-top">
+    <div class="dg-top-inner">
+      <div class="dg-brand">
+        <span class="dg-brand-mark">PESOMA III</span>
+        <span class="dg-brand-sub">Design Gallery Â· All Pages</span>
       </div>
-      <div class="figma-toolbar-center">
-        PESOMA 2026 — UI Design System & Screens (Canvas View)
-      </div>
-      <div class="figma-toolbar-right">
-        <span class="figma-badge">html.to.design Ready</span>
-        <select class="figma-navigator" aria-label="Lompat ke Frame" onchange="if(this.value) { document.getElementById(this.value).scrollIntoView({behavior: 'smooth', block: 'center'}); }">
-          <option value="">Lompat ke Frame...</option>
-          <option value="frame-landing">1. Desktop - Beranda Utama</option>
-          <option value="frame-login">2. Desktop - Login Portal</option>
-          <option value="frame-register">3. Desktop - Register Portal</option>
-          <option value="frame-reset">4. Desktop - Reset Password</option>
-          <option value="frame-admin">5. Desktop - Admin Dashboard</option>
-          <option value="frame-panitia">6. Desktop - Panitia Dashboard</option>
-          <option value="frame-juri">7. Desktop - Juri Dashboard</option>
-          <option value="frame-peserta">8. Desktop - Peserta Dashboard</option>
-          <option value="frame-uikit">9. Desktop - UI Kit & Components</option>
-          <option value="frame-detaillomba">10. Desktop - Detail Cabang Lomba</option>
-          <option value="frame-unduhjuknis">11. Desktop - Unduh Juknis</option>
-          <option value="frame-detailpengumuman">12. Desktop - Detail Pengumuman</option>
-          <option value="frame-kontak">13. Desktop - Hubungi Kami (Kontak)</option>
-        </select>
-      </div>
+      <nav class="dg-nav">
+        <a href="#group-public" class="dg-nav-link">Public</a>
+        <a href="#group-auth" class="dg-nav-link">Auth</a>
+        <a href="#group-admin" class="dg-nav-link">Admin</a>
+        <a href="#group-panitia" class="dg-nav-link">Panitia</a>
+        <a href="#group-juri" class="dg-nav-link">Juri</a>
+        <a href="#group-peserta" class="dg-nav-link">Peserta</a>
+      </nav>
+      <a class="dg-info" href="../index.php" target="_blank" rel="noopener">Buka Live Site â†’</a>
     </div>
+  </header>
 
-    <!-- Figma Workspace Canvas -->
-    <main class="figma-canvas">
+  <main class="dg-main">
 
-      <!-- ============================================================
-           FRAME 1: Desktop - Beranda Utama (Landing Page)
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-landing">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-desktop"></i> 1. Desktop - Beranda Utama</span>
-          <span class="frame-dimensions">1440 × Auto</span>
-        </div>
-        <div class="figma-frame height-auto">
-          <div class="frame-viewport">
-            <header class="landing-header">
-              <div class="navbar">
-                <a href="#frame-landing" class="brand">
-                  <span class="brand-mark">P</span>
-                  <div class="brand-text">
-                    <span>PESOMA 2026</span>
-                    <small>UIN SAIZU Purwokerto</small>
-                  </div>
-                </a>
-                <div class="nav-links">
-                  <a href="#frame-landing" class="active">Beranda</a>
-                  <a href="#lomba">Cabang Lomba</a>
-                  <a href="#jadwal">Jadwal</a>
-                  <a href="#pengumuman">Pengumuman</a>
-                  <a href="#tentang">Tentang</a>
-                  <a href="#frame-login" class="btn primary" style="padding: 6px 14px; min-height: auto; font-size: 10px;" onclick="document.getElementById('frame-login').scrollIntoView({behavior: 'smooth', block: 'center'});">Login Portal</a>
-                </div>
-              </div>
-            </header>
-
-            <main>
-              <!-- Hero Section -->
-              <section class="hero">
-                <div class="hero-grid-mesh"></div>
-                <div class="hero-inner">
-                  <div class="hero-content">
-                    <div class="hero-eyebrow">
-                      <span class="dot"></span>
-                      Pendaftaran Dibuka
-                    </div>
-                    <h1>
-                      Unjuk Aksi,<br />
-                      Raih <span class="accent">Prestasi</span>
-                    </h1>
-                    <p class="hero-desc">
-                      Portal resmi Pekan Seni dan Olahraga Mahasiswa (PESOMA) 2026 UIN Prof. K.H. Saifuddin Zuhri Purwokerto. Daftarkan diri Anda, unggah karya terbaik, dan ikuti penjurian secara transparan.
-                    </p>
-                    <div class="hero-actions">
-                      <a href="#frame-register" class="btn primary" onclick="document.getElementById('frame-register').scrollIntoView({behavior: 'smooth', block: 'center'});">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        Daftar Sekarang
-                      </a>
-                      <a href="#lomba" class="btn secondary" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: white !important;">
-                        <i class="fa-solid fa-trophy"></i>
-                        Cabang Lomba
-                      </a>
-                    </div>
-                  </div>
-                  <div class="hero-panel">
-                    <div class="hero-panel-card">
-                      <span class="hero-panel-label">Timeline</span>
-                      <strong>Mei — Juni 2026</strong>
-                      <span>Pendaftaran, penyisihan, dan final berlangsung selama 6 minggu.</span>
-                    </div>
-                    <div class="hero-panel-card">
-                      <span class="hero-panel-label">Kategori Lomba</span>
-                      <strong>Seni & Olahraga</strong>
-                      <span>14 Cabang Lomba bergengsi antar Mahasiswa UIN SAIZU.</span>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Stats Section -->
-              <section class="section">
-                <div class="stats-grid">
-                  <div class="stat">
-                    <span class="stat-value">14</span>
-                    <span class="stat-label">Cabang Lomba</span>
-                  </div>
-                  <div class="stat">
-                    <span class="stat-value">500+</span>
-                    <span class="stat-label">Peserta Terdaftar</span>
-                  </div>
-                  <div class="stat">
-                    <span class="stat-value">24</span>
-                    <span class="stat-label">Finalis Terpilih</span>
-                  </div>
-                  <div class="stat">
-                    <span class="stat-value">10</span>
-                    <span class="stat-label">Juara Umum</span>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Cabang Lomba -->
-              <section class="section" id="lomba" style="background: #ffffff;">
-                <div class="section-head">
-                  <span class="section-tag">Kompetisi</span>
-                  <h2 class="section-title">Cabang Unggulan</h2>
-                  <p class="section-desc">Pilih cabang kompetisi sesuai minat dan keahlian Anda, lalu persiapkan diri untuk meraih kemenangan.</p>
-                </div>
-                <div class="grid-3">
-                  <article class="card">
-                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
-                    <h3>Film Pendek</h3>
-                    <p>Kompetisi produksi film pendek bertema kreatif, edukatif, dan inspiratif bagi mahasiswa.</p>
-                    <a href="#frame-landing" class="btn secondary" style="width: fit-content; margin-top: auto;">Lihat Detail</a>
-                  </article>
-                  <article class="card">
-                    <div class="card-icon"><i class="fa-solid fa-futbol"></i></div>
-                    <h3>Futsal</h3>
-                    <p>Pertandingan olahraga futsal antar tim perwakilan fakultas yang menjunjung tinggi sportivitas.</p>
-                    <a href="#frame-landing" class="btn secondary" style="width: fit-content; margin-top: auto;">Lihat Detail</a>
-                  </article>
-                  <article class="card">
-                    <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
-                    <h3>Inovasi Sains</h3>
-                    <p>Kompetisi karya tulis ilmiah dan presentasi purwarupa inovatif berbasis solusi untuk masyarakat.</p>
-                    <a href="#frame-landing" class="btn secondary" style="width: fit-content; margin-top: auto;">Lihat Detail</a>
-                  </article>
-                  <article class="card">
-                    <div class="card-icon"><i class="fa-solid fa-microphone-lines"></i></div>
-                    <h3>Public Speaking</h3>
-                    <p>Kompetisi pidato tiga bahasa (Indonesia, Arab, Inggris) untuk menguji kecakapan retorika.</p>
-                    <a href="#frame-landing" class="btn secondary" style="width: fit-content; margin-top: auto;">Lihat Detail</a>
-                  </article>
-                  <article class="card">
-                    <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
-                    <h3>Desain Poster</h3>
-                    <p>Karya seni poster digital bertema edukasi dan pesan sosial dengan estetika visual tinggi.</p>
-                    <a href="#frame-landing" class="btn secondary" style="width: fit-content; margin-top: auto;">Lihat Detail</a>
-                  </article>
-                  <article class="card">
-                    <div class="card-icon"><i class="fa-solid fa-chess"></i></div>
-                    <h3>Catur Klasik</h3>
-                    <p>Turnamen catur berstandar nasional yang mengasah taktik, konsentrasi, dan fokus mental.</p>
-                    <a href="#frame-landing" class="btn secondary" style="width: fit-content; margin-top: auto;">Lihat Detail</a>
-                  </article>
-                </div>
-              </section>
-
-              <!-- Timeline -->
-              <section class="section" id="jadwal">
-                <div class="section-head">
-                  <span class="section-tag">Timeline</span>
-                  <h2 class="section-title">Jadwal Agenda</h2>
-                  <p class="section-desc">Berikut adalah tahapan pelaksanaan event PESOMA 2026 dari awal pendaftaran hingga malam penganugerahan.</p>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span>1 Mei 2026</span>
-                    <strong>Pembukaan Pendaftaran</strong>
-                    <p>Pendaftaran peserta dilakukan secara online melalui portal resmi.</p>
-                  </div>
-                  <div class="timeline-item">
-                    <span>15 Mei 2026</span>
-                    <strong>Penutupan Pendaftaran & Submit Karya</strong>
-                    <p>Batas akhir unggah berkas administrasi dan karya kompetisi.</p>
-                  </div>
-                  <div class="timeline-item">
-                    <span>20 Mei 2026</span>
-                    <strong>Penyisihan & Verifikasi Berkas</strong>
-                    <p>Proses seleksi administrasi oleh panitia dan penilaian penyisihan oleh juri.</p>
-                  </div>
-                  <div class="timeline-item">
-                    <span>31 Mei 2026</span>
-                    <strong>Pengumuman Finalis</strong>
-                    <p>Pengumuman 24 peserta terpilih yang berhak maju ke babak final secara luring.</p>
-                  </div>
-                  <div class="timeline-item">
-                    <span>5 Juni 2026</span>
-                    <strong>Grand Final & Awarding Night</strong>
-                    <p>Penjurian langsung dan malam puncak pengumuman juara PESOMA 2026.</p>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Pengumuman -->
-              <section class="section" id="pengumuman" style="background: #ffffff;">
-                <div class="section-head">
-                  <span class="section-tag">Info Terbaru</span>
-                  <h2 class="section-title">Pengumuman & Berita</h2>
-                  <p class="section-desc">Ikuti terus berita terkini dan pengumuman hasil seleksi di sini.</p>
-                </div>
-                <div class="list" style="max-width: 800px; margin: 0 auto;">
-                  <div class="list-item">
-                    <div class="list-item-content">
-                      <span class="badge finalist" style="width: fit-content;"><span class="badge-dot-indicator"></span>Finalis</span>
-                      <span class="list-item-title">Pengumuman Finalis Cabang Film Pendek dan Inovasi Sains</span>
-                      <div class="list-item-meta">
-                        <i class="fa-regular fa-calendar"></i> 31 Mei 2026 · 10:30 WIB · Admin PESOMA
-                      </div>
-                    </div>
-                    <a href="#frame-landing" class="btn secondary">Baca Pengumuman</a>
-                  </div>
-                  <div class="list-item">
-                    <div class="list-item-content">
-                      <span class="badge winner" style="width: fit-content;"><span class="badge-dot-indicator"></span>Juara</span>
-                      <span class="list-item-title">Pemenang Juara Umum PESOMA 2026 Resmi Diumumkan</span>
-                      <div class="list-item-meta">
-                        <i class="fa-regular fa-calendar"></i> 5 Juni 2026 · 14:00 WIB · Admin PESOMA
-                      </div>
-                    </div>
-                    <a href="#frame-landing" class="btn secondary">Baca Pengumuman</a>
-                  </div>
-                  <div class="list-item">
-                    <div class="list-item-content">
-                      <span class="badge pending" style="width: fit-content;"><span class="badge-dot-indicator"></span>Jadwal</span>
-                      <span class="list-item-title">Jadwal Technical Meeting Finalis PESOMA 2026</span>
-                      <div class="list-item-meta">
-                        <i class="fa-regular fa-calendar"></i> 28 Mei 2026 · 09:15 WIB · Panitia Lomba
-                      </div>
-                    </div>
-                    <a href="#frame-landing" class="btn secondary">Baca Pengumuman</a>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Tentang Kami -->
-              <section class="section" id="tentang">
-                <div class="section-head">
-                  <span class="section-tag">Tentang Kami</span>
-                  <h2 class="section-title">Visi & Misi</h2>
-                  <p class="section-desc">Membangun mahasiswa unggul, berprestasi, dan berakhlak mulia melalui wadah kolaboratif seni dan olahraga.</p>
-                </div>
-                <div class="grid-2">
-                  <div class="card accent-card">
-                    <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
-                    <h3>Visi Kegiatan</h3>
-                    <p>Menjadi pionir wadah kreativitas mahasiswa UIN SAIZU Purwokerto yang melahirkan bakat-bakat unggul berstandar nasional dan internasional dengan memadukan nilai-nilai keislaman dan sportivitas.</p>
-                  </div>
-                  <div class="card accent-card">
-                    <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
-                    <h3>Misi Kegiatan</h3>
-                    <p>Menyelenggarakan kompetisi seni dan olahraga yang adil, objektif, dan transparan. Mendorong inovasi dan riset berbasis sains di kalangan mahasiswa, serta mempererat silaturahmi civitas akademika.</p>
-                  </div>
-                </div>
-              </section>
-
-              <!-- CTA -->
-              <section class="cta-section">
-                <h2>Siap Mengukir Sejarah Prestasi?</h2>
-                <p>Daftarkan dirimu dan jadilah bagian dari ajang terbesar Pekan Seni dan Olahraga Mahasiswa UIN SAIZU Purwokerto 2026.</p>
-                <a href="#frame-register" class="btn primary" style="background: white; color: var(--color-surface-muted) !important;" onclick="document.getElementById('frame-register').scrollIntoView({behavior: 'smooth', block: 'center'});">Registrasi Sekarang</a>
-              </section>
-            </main>
-
-            <footer>
-              <p>© 2026 PESOMA UIN Prof. K.H. Saifuddin Zuhri Purwokerto. All Rights Reserved.</p>
-              <p>Email: <a href="mailto:pesoma@uinsaizu.ac.id">pesoma@uinsaizu.ac.id</a> · Telp: +62 812-0000-2026</p>
-            </footer>
-          </div>
-        </div>
+    <!-- ===== PUBLIC ===== -->
+    <section class="dg-group" id="group-public">
+      <header class="dg-group-head">
+        <span class="dg-group-tag">Block A</span>
+        <h2 class="dg-group-title">Public Site</h2>
+        <p class="dg-group-desc">Halaman publik di pages/. Memakai assets/css/pesoma-public.css.</p>
+      </header>
+      <div class="dg-grid">
+        <figure class="dg-frame">
+          <figcaption>Beranda<a class="dg-frame-open" href="../pages/beranda.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="../pages/beranda.php" loading="lazy" title="Beranda"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Cabang Lomba<a class="dg-frame-open" href="../pages/cabang-lomba.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="../pages/cabang-lomba.php" loading="lazy"
+            title="Cabang Lomba"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Jadwal<a class="dg-frame-open" href="../pages/jadwal.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="../pages/jadwal.php" loading="lazy" title="Jadwal"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Pengumuman<a class="dg-frame-open" href="../pages/pengumuman.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="../pages/pengumuman.php" loading="lazy"
+            title="Pengumuman"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Tentang<a class="dg-frame-open" href="../pages/tentang.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="../pages/tentang.php" loading="lazy" title="Tentang"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Kontak<a class="dg-frame-open" href="../pages/kontak.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="../pages/kontak.php" loading="lazy" title="Kontak"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Unduh Juknis<a class="dg-frame-open" href="../pages/unduh-juknis.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="../pages/unduh-juknis.php" loading="lazy"
+            title="Unduh Juknis"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Detail Lomba<a class="dg-frame-open" href="../pages/detail-lomba.php?id=15" target="_blank" rel="noopener">Open</a></figcaption><iframe src="../pages/detail-lomba.php?id=15" loading="lazy"
+            title="Detail Lomba"></iframe>
+        </figure>
       </div>
+    </section>
 
-
-      <!-- ============================================================
-           FRAME 2: Desktop - Login Portal
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-login">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-right-to-bracket"></i> 2. Desktop - Login Portal</span>
-          <span class="frame-dimensions">1440 × 900</span>
-        </div>
-        <div class="figma-frame height-fixed">
-          <div class="frame-viewport">
-            <div class="auth-split-layout">
-              <div class="auth-graphic-side">
-                <div class="auth-brand">
-                  <span class="brand-mark">P</span>
-                  <span>PESOMA 2026</span>
-                </div>
-                <div class="auth-graphic-content">
-                  <h2 class="auth-graphic-title">Unjuk Aksi,<br>Raih Prestasi.</h2>
-                  <p class="auth-graphic-desc">Selamat datang kembali di Portal PESOMA UIN SAIZU. Masuk untuk mengelola pendaftaran, unggah karya, atau memberikan penilaian secara efisien.</p>
-                  
-                  <!-- Frosted Glass Highlights Card -->
-                  <div class="auth-glass-card">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                      <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-accent); display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-circle-play"></i> Highlight Event</span>
-                      <span style="font-size: 8px; background: rgba(59, 130, 246, 0.2); color: #93c5fd; padding: 2px 6px; border-radius: 4px; font-weight: 700;">UIN SAIZU</span>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 8px;">
-                      <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 24px; height: 24px; background: rgba(255,255,255,0.06); border-radius: 4px; display: grid; place-items: center; font-size: 10px;"><i class="fa-solid fa-trophy" style="color: #fbbf24;"></i></div>
-                        <span style="font-size: 11px; font-weight: 600; color: #f1f5f9;">14 Cabang Seni & Olahraga</span>
-                      </div>
-                      <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 24px; height: 24px; background: rgba(255,255,255,0.06); border-radius: 4px; display: grid; place-items: center; font-size: 10px;"><i class="fa-solid fa-users" style="color: #60a5fa;"></i></div>
-                        <span style="font-size: 11px; font-weight: 600; color: #f1f5f9;">500+ Mahasiswa Terdaftar</span>
-                      </div>
-                      <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 24px; height: 24px; background: rgba(255,255,255,0.06); border-radius: 4px; display: grid; place-items: center; font-size: 10px;"><i class="fa-solid fa-school" style="color: #34d399;"></i></div>
-                        <span style="font-size: 11px; font-weight: 600; color: #f1f5f9;">Representasi 4 Fakultas Unggulan</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="auth-graphic-footer">
-                  <span>UIN Prof. K.H. Saifuddin Zuhri Purwokerto</span>
-                </div>
-              </div>
-              <div class="auth-form-side">
-                <div class="auth-form-card">
-                  <h2>Masuk Akun</h2>
-                  <p>Silakan masukkan kredensial akun mahasiswa atau panitia Anda.</p>
-                  
-                  <div class="form-group">
-                    <label for="login-email">Alamat Email Kampus</label>
-                    <div class="input-icon-wrapper">
-                      <i class="fa-regular fa-envelope input-prefix-icon"></i>
-                      <input type="email" id="login-email" placeholder="contoh: nim@student.uinsaizu.ac.id" required>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-1);">
-                      <label for="login-password" style="margin-bottom: 0;">Kata Sandi</label>
-                      <a href="#frame-reset" style="font-size: var(--font-size-xs); font-weight: 600; color: var(--color-surface-muted);" onclick="document.getElementById('frame-reset').scrollIntoView({behavior: 'smooth', block: 'center'});">Lupa Sandi?</a>
-                    </div>
-                    <div class="input-icon-wrapper">
-                      <i class="fa-solid fa-lock input-prefix-icon"></i>
-                      <input type="password" id="login-password" placeholder="Masukkan kata sandi portal" required>
-                      <i class="fa-regular fa-eye input-suffix-icon" style="cursor: pointer;" onclick="togglePasswordVisibility('login-password', this)"></i>
-                    </div>
-                  </div>
-                  
-                  <div style="display: flex; align-items: center; gap: 8px; margin-bottom: var(--space-4);">
-                    <input type="checkbox" id="remember" style="width: auto; margin: 0;">
-                    <label for="remember" style="margin-bottom: 0; font-weight: 500; font-size: var(--font-size-sm); cursor: pointer;">Ingat perangkat ini</label>
-                  </div>
-
-                  <button class="btn primary w-full">Masuk Portal</button>
-
-                  <div style="display: flex; align-items: center; gap: 10px; margin: var(--space-5) 0 var(--space-3) 0;">
-                    <hr style="flex: 1; border: none; border-top: 1px solid var(--color-border-default);">
-                    <span style="font-size: 9px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">Atau masuk via</span>
-                    <hr style="flex: 1; border: none; border-top: 1px solid var(--color-border-default);">
-                  </div>
-                  
-                  <button class="btn secondary w-full" style="display: flex; align-items: center; justify-content: center; gap: 10px; border-color: #cbd5e1;">
-                    <span style="width: 18px; height: 18px; background: var(--color-surface-muted); color: white; border-radius: 50%; font-size: 10px; font-weight: 900; display: grid; place-items: center;">U</span>
-                    <span>UIN SAIZU Single Sign-On</span>
-                  </button>
-
-                  <p style="text-align: center; margin-top: var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-primary);">
-                    Belum memiliki akun? <a href="#frame-register" style="color: var(--color-surface-muted); font-weight: 700;" onclick="document.getElementById('frame-register').scrollIntoView({behavior: 'smooth', block: 'center'});">Daftar Sekarang</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- ===== AUTH ===== -->
+    <section class="dg-group" id="group-auth">
+      <header class="dg-group-head">
+        <span class="dg-group-tag">Block B</span>
+        <h2 class="dg-group-title">Auth</h2>
+        <p class="dg-group-desc">Login, Register, Forgot Password. Layout split graphic-side cream + form-side putih.
+        </p>
+      </header>
+      <div class="dg-grid">
+        <figure class="dg-frame">
+          <figcaption>Login<a class="dg-frame-open" href="../src/auth/login.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="../src/auth/login.php" loading="lazy" title="Login"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Register<a class="dg-frame-open" href="../src/auth/register.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="../src/auth/register.php" loading="lazy"
+            title="Register"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Forgot Password<a class="dg-frame-open" href="../src/auth/forgot-password.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="../src/auth/forgot-password.php" loading="lazy"
+            title="Forgot Password"></iframe>
+        </figure>
       </div>
+    </section>
 
-
-      <!-- ============================================================
-           FRAME 3: Desktop - Register Portal
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-register">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-user-plus"></i> 3. Desktop - Register Portal</span>
-          <span class="frame-dimensions">1440 × 900</span>
-        </div>
-        <div class="figma-frame height-fixed">
-          <div class="frame-viewport">
-            <div class="auth-split-layout">
-              <div class="auth-graphic-side">
-                <div class="auth-brand">
-                  <span class="brand-mark">P</span>
-                  <span>PESOMA 2026</span>
-                </div>
-                <div class="auth-graphic-content">
-                  <h2 class="auth-graphic-title">Daftar Akun<br>Peserta Lomba</h2>
-                  <p class="auth-graphic-desc">Buat akun untuk berpartisipasi dalam pendaftaran cabang seni & olahraga PESOMA 2026. Satu akun untuk mendaftarkan tim atau individu.</p>
-                  
-                  <!-- Frosted Glass Requirements Card -->
-                  <div class="auth-glass-card">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                      <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-accent); display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-shield-halved"></i> Persyaratan Berkas</span>
-                      <span style="font-size: 8px; background: rgba(16, 185, 129, 0.2); color: #a7f3d0; padding: 2px 6px; border-radius: 4px; font-weight: 700;">Wajib</span>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 8px;">
-                      <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="color: var(--color-accent); font-size: 10px; width: 14px; text-align: center;"><i class="fa-solid fa-circle-check"></i></div>
-                        <span style="font-size: 11px; font-weight: 600; color: #f1f5f9;">KTM / KTMS Aktif (Format PDF)</span>
-                      </div>
-                      <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="color: var(--color-accent); font-size: 10px; width: 14px; text-align: center;"><i class="fa-solid fa-circle-check"></i></div>
-                        <span style="font-size: 11px; font-weight: 600; color: #f1f5f9;">KRS Berjalan Terverifikasi</span>
-                      </div>
-                      <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="color: var(--color-accent); font-size: 10px; width: 14px; text-align: center;"><i class="fa-solid fa-circle-check"></i></div>
-                        <span style="font-size: 11px; font-weight: 600; color: #f1f5f9;">Foto Formal Mahasiswa (3x4)</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="auth-graphic-footer">
-                  <span>UIN Prof. K.H. Saifuddin Zuhri Purwokerto</span>
-                </div>
-              </div>
-              <div class="auth-form-side" style="padding-top: var(--space-4); padding-bottom: var(--space-4);">
-                <div class="auth-form-card" style="max-width: 400px;">
-                  <h2>Pendaftaran Akun</h2>
-                  <p>Lengkapi data diri Anda sesuai dengan data resmi civitas akademika.</p>
-                  
-                  <div class="form-group">
-                    <label for="reg-name">Nama Lengkap</label>
-                    <div class="input-icon-wrapper">
-                      <i class="fa-regular fa-user input-prefix-icon"></i>
-                      <input type="text" id="reg-name" placeholder="Masukkan nama lengkap Anda" required>
-                    </div>
-                  </div>
-                  <div class="grid-2" style="gap: var(--space-3); margin-bottom: 0;">
-                    <div class="form-group">
-                      <label for="reg-nim">NIM (Nomor Induk)</label>
-                      <div class="input-icon-wrapper">
-                        <i class="fa-solid fa-id-card input-prefix-icon"></i>
-                        <input type="text" id="reg-nim" placeholder="Contoh: 2241010..." required>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="reg-fakultas">Fakultas</label>
-                      <div class="input-icon-wrapper">
-                        <i class="fa-solid fa-graduation-cap input-prefix-icon"></i>
-                        <select id="reg-fakultas">
-                          <option value="">Pilih Fakultas</option>
-                          <option value="FTIK">FTIK</option>
-                          <option value="FUAH">FUAH</option>
-                          <option value="FASYA">FASYA</option>
-                          <option value="FEBI">FEBI</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="reg-email">Email Mahasiswa</label>
-                    <div class="input-icon-wrapper">
-                      <i class="fa-regular fa-envelope input-prefix-icon"></i>
-                      <input type="email" id="reg-email" placeholder="email@student.uinsaizu.ac.id" required>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="reg-password">Kata Sandi</label>
-                    <div class="input-icon-wrapper">
-                      <i class="fa-solid fa-lock input-prefix-icon"></i>
-                      <input type="password" id="reg-password" placeholder="Minimal 8 karakter" required>
-                      <i class="fa-regular fa-eye input-suffix-icon" style="cursor: pointer;" onclick="togglePasswordVisibility('reg-password', this)"></i>
-                    </div>
-                  </div>
-
-                  <button class="btn primary w-full">Daftar Sekarang</button>
-
-                  <p style="text-align: center; margin-top: var(--space-4); font-size: var(--font-size-sm); color: var(--color-text-primary); margin-bottom: 0;">
-                    Sudah memiliki akun? <a href="#frame-login" style="color: var(--color-surface-muted); font-weight: 700;" onclick="document.getElementById('frame-login').scrollIntoView({behavior: 'smooth', block: 'center'});">Masuk Portal</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- ===== ADMIN ===== -->
+    <section class="dg-group" id="group-admin">
+      <header class="dg-group-head">
+        <span class="dg-group-tag">Block C</span>
+        <h2 class="dg-group-title">Dashboard Admin</h2>
+        <p class="dg-group-desc">Halaman admin di src/admin/. Memakai assets/css/dashboard-pesoma.css. Login dulu
+          sebagai admin agar konten dashboard tampil; tanpa session, frame menampilkan halaman login.</p>
+      </header>
+      <div class="dg-notice"><strong>Catatan:</strong> Iframe-iframe di bawah otomatis login sebagai user admin pertama di database via design/preview.php (dev only, hanya jalan dari localhost). Tampilan akan langsung menjadi dashboard sebenarnya — bukan halaman login.</div>
+      <div class="dg-grid">
+        <figure class="dg-frame">
+          <figcaption>Dashboard<a class="dg-frame-open" href="preview.php?role=admin&page=dashboard.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=admin&page=dashboard.php" loading="lazy"
+            title="Admin Dashboard"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Kelola User<a class="dg-frame-open" href="preview.php?role=admin&page=kelola-user.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=admin&page=kelola-user.php" loading="lazy"
+            title="Kelola User"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Kelola Cabang Lomba<a class="dg-frame-open" href="preview.php?role=admin&page=kelola-cabang-lomba.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=admin&page=kelola-cabang-lomba.php" loading="lazy"
+            title="Kelola Cabang Lomba"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Kelola Aspek Penilaian<a class="dg-frame-open" href="preview.php?role=admin&page=kelola-aspek.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=admin&page=kelola-aspek.php" loading="lazy"
+            title="Kelola Aspek"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Kelola Jadwal<a class="dg-frame-open" href="preview.php?role=admin&page=kelola-jadwal.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=admin&page=kelola-jadwal.php" loading="lazy"
+            title="Kelola Jadwal"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Backup Database<a class="dg-frame-open" href="preview.php?role=admin&page=backup-database.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=admin&page=backup-database.php" loading="lazy"
+            title="Backup DB"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Log Aktivitas<a class="dg-frame-open" href="preview.php?role=admin&page=log-aktivitas.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=admin&page=log-aktivitas.php" loading="lazy"
+            title="Log Aktivitas"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Pengaturan<a class="dg-frame-open" href="preview.php?role=admin&page=pengaturan.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=admin&page=pengaturan.php" loading="lazy"
+            title="Pengaturan"></iframe>
+        </figure>
       </div>
+    </section>
 
-
-      <!-- ============================================================
-           FRAME 4: Desktop - Reset Password
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-reset">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-key"></i> 4. Desktop - Reset Password</span>
-          <span class="frame-dimensions">1440 × 900</span>
-        </div>
-        <div class="figma-frame height-fixed">
-          <div class="frame-viewport">
-            <div class="auth-split-layout">
-              <div class="auth-graphic-side">
-                <div class="auth-brand">
-                  <span class="brand-mark">P</span>
-                  <span>PESOMA 2026</span>
-                </div>
-                <div class="auth-graphic-content">
-                  <h2 class="auth-graphic-title">Pemulihan Akun</h2>
-                  <p class="auth-graphic-desc">Kehilangan akses akun Anda? Masukkan alamat email mahasiswa terdaftar Anda untuk menerima instruksi pemulihan kata sandi.</p>
-                  
-                  <!-- Frosted Glass Help FAQ Card -->
-                  <div class="auth-glass-card">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                      <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #a78bfa; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-circle-info"></i> Pusat Bantuan</span>
-                      <span style="font-size: 8px; background: rgba(139, 92, 246, 0.2); color: #ddd6fe; padding: 2px 6px; border-radius: 4px; font-weight: 700;">FAQ</span>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 8px;">
-                      <div style="font-size: 11px; color: #cbd5e1; line-height: 1.4;">
-                        <strong style="color: #ffffff; display: block; margin-bottom: 2px;">Email tidak terdaftar?</strong>
-                        Hubungi sekretariat pendaftaran PESOMA di gedung Kemahasiswaan Lantai 1.
-                      </div>
-                      <div style="font-size: 11px; color: #cbd5e1; line-height: 1.4; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 6px;">
-                        <strong style="color: #ffffff; display: block; margin-bottom: 2px;">Link Kedaluwarsa?</strong>
-                        Link pemulihan otomatis kedaluwarsa dalam 15 menit demi keamanan akun Anda.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="auth-graphic-footer">
-                  <span>UIN Prof. K.H. Saifuddin Zuhri Purwokerto</span>
-                </div>
-              </div>
-              <div class="auth-form-side">
-                <div class="auth-form-card">
-                  <h2>Lupa Kata Sandi?</h2>
-                  <p>Kami akan mengirimkan instruksi dan tautan untuk membuat kata sandi baru melalui email mahasiswa terdaftar Anda.</p>
-                  
-                  <div class="form-group">
-                    <label for="reset-email">Email Mahasiswa</label>
-                    <div class="input-icon-wrapper">
-                      <i class="fa-regular fa-envelope input-prefix-icon"></i>
-                      <input type="email" id="reset-email" placeholder="contoh: nim@student.uinsaizu.ac.id" required>
-                    </div>
-                  </div>
-
-                  <button class="btn primary w-full mb-3">Kirim Link Pemulihan</button>
-                  <a href="#frame-login" class="btn secondary w-full" onclick="document.getElementById('frame-login').scrollIntoView({behavior: 'smooth', block: 'center'});">Kembali ke Login</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- ===== PANITIA ===== -->
+    <section class="dg-group" id="group-panitia">
+      <header class="dg-group-head">
+        <span class="dg-group-tag">Block D</span>
+        <h2 class="dg-group-title">Dashboard Panitia</h2>
+        <p class="dg-group-desc">Verifikasi peserta, daftar karya, finalis, pemenang, jadwal, pengumuman, laporan.</p>
+      </header>
+      <div class="dg-notice"><strong>Catatan:</strong> Iframe-iframe di bawah otomatis login sebagai user panitia pertama di database via design/preview.php (dev only, hanya jalan dari localhost). Tampilan akan langsung menjadi dashboard sebenarnya — bukan halaman login.</div>
+      <div class="dg-grid">
+        <figure class="dg-frame">
+          <figcaption>Dashboard<a class="dg-frame-open" href="preview.php?role=panitia&page=dashboard.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=panitia&page=dashboard.php" loading="lazy"
+            title="Panitia Dashboard"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Verifikasi Peserta<a class="dg-frame-open" href="preview.php?role=panitia&page=verifikasi-peserta.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=panitia&page=verifikasi-peserta.php" loading="lazy"
+            title="Verifikasi Peserta"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Daftar Karya<a class="dg-frame-open" href="preview.php?role=panitia&page=daftar-karya.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=panitia&page=daftar-karya.php" loading="lazy"
+            title="Daftar Karya"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Tentukan Finalis<a class="dg-frame-open" href="preview.php?role=panitia&page=tentukan-finalis.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=panitia&page=tentukan-finalis.php" loading="lazy"
+            title="Tentukan Finalis"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Input Pemenang<a class="dg-frame-open" href="preview.php?role=panitia&page=input-pemenang.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=panitia&page=input-pemenang.php" loading="lazy"
+            title="Input Pemenang"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Kelola Jadwal<a class="dg-frame-open" href="preview.php?role=panitia&page=kelola-jadwal.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=panitia&page=kelola-jadwal.php" loading="lazy"
+            title="Kelola Jadwal Panitia"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Buat Pengumuman<a class="dg-frame-open" href="preview.php?role=panitia&page=buat-pengumuman.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=panitia&page=buat-pengumuman.php" loading="lazy"
+            title="Buat Pengumuman"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Laporan<a class="dg-frame-open" href="preview.php?role=panitia&page=laporan.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=panitia&page=laporan.php" loading="lazy"
+            title="Laporan"></iframe>
+        </figure>
       </div>
+    </section>
 
-
-      <!-- ============================================================
-           FRAME 5: Desktop - Admin Dashboard
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-admin">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-gauge"></i> 5. Desktop - Admin Dashboard</span>
-          <span class="frame-dimensions">1440 × 950</span>
-        </div>
-        <div class="figma-frame height-dashboard">
-          <div class="frame-viewport">
-            <div class="dashboard-layout">
-              <!-- Sidebar -->
-              <aside class="dashboard-sidebar">
-                <div class="sidebar-brand">
-                  <span class="brand-mark" style="width: 28px; height: 28px; font-size: 14px;">P</span>
-                  <span>PESOMA 2026</span>
-                </div>
-                <div class="sidebar-menu-title">Main Portal</div>
-                <nav class="sidebar-menu" style="margin-bottom: var(--space-4);">
-                  <a href="#frame-admin" class="sidebar-menu-item active"><i class="fa-solid fa-chart-line"></i> Ringkasan</a>
-                  <a href="#frame-admin" class="sidebar-menu-item"><i class="fa-solid fa-users"></i> Kelola User</a>
-                  <a href="#frame-admin" class="sidebar-menu-item"><i class="fa-solid fa-trophy"></i> Cabang Lomba</a>
-                </nav>
-                <div class="sidebar-menu-title">Control Center</div>
-                <nav class="sidebar-menu">
-                  <a href="#frame-admin" class="sidebar-menu-item"><i class="fa-solid fa-envelope-open-text"></i> Pengumuman</a>
-                  <a href="#frame-admin" class="sidebar-menu-item"><i class="fa-solid fa-gears"></i> Pengaturan</a>
-                </nav>
-                <div class="sidebar-footer">
-                  <div class="sidebar-user-avatar">AD</div>
-                  <div class="sidebar-user-info">
-                    <span class="sidebar-user-name">M. Nabil S.</span>
-                    <span class="sidebar-user-role">Administrator</span>
-                  </div>
-                </div>
-              </aside>
-              <!-- Main Content -->
-              <main class="dashboard-main">
-                <header class="dashboard-header">
-                  <div class="dashboard-title">Dashboard Admin</div>
-                  <div class="dashboard-actions">
-                    <div class="dashboard-search">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                      <input type="text" placeholder="Cari data...">
-                    </div>
-                    <button class="icon-btn" aria-label="Notifikasi">
-                      <i class="fa-regular fa-bell"></i>
-                      <span class="icon-btn-dot"></span>
-                    </button>
-                  </div>
-                </header>
-                <div class="dashboard-content">
-                  <!-- Statistics Grid -->
-                  <div class="stats-grid mb-5" style="margin-top: 0;">
-                    <div class="stat">
-                      <span class="stat-value">1,240</span>
-                      <span class="stat-label">Total Pengguna</span>
-                    </div>
-                    <div class="stat">
-                      <span class="stat-value">14</span>
-                      <span class="stat-label">Lomba Aktif</span>
-                    </div>
-                    <div class="stat">
-                      <span class="stat-value">45</span>
-                      <span class="stat-label">Berkas Pending</span>
-                    </div>
-                    <div class="stat">
-                      <span class="stat-value">10</span>
-                      <span class="stat-label">Jumlah Juri</span>
-                    </div>
-                  </div>
-
-                  <!-- Table Grid -->
-                  <div class="dashboard-grid-main">
-                    <div class="card" style="display: flex; flex-direction: column;">
-                      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
-                        <h3 style="margin-bottom: 0;">Log Aktivitas Sistem</h3>
-                        <button class="btn secondary" style="padding: 4px 10px; font-size: 10px; min-height: auto;">Cetak Laporan</button>
-                      </div>
-                      <div class="table-responsive" style="flex: 1;">
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>Waktu</th>
-                              <th>Aktor</th>
-                              <th>Aksi</th>
-                              <th>Status</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>01 Juni 2026, 01:10</td>
-                              <td>admin_nabil</td>
-                              <td>Update Pengumuman Finalis</td>
-                              <td><span class="badge accepted"><span class="badge-dot-indicator"></span>Sukses</span></td>
-                            </tr>
-                            <tr>
-                              <td>31 Mei 2026, 23:45</td>
-                              <td>panitia_futsal</td>
-                              <td>Verifikasi Berkas Tim FASYA A</td>
-                              <td><span class="badge accepted"><span class="badge-dot-indicator"></span>Sukses</span></td>
-                            </tr>
-                            <tr>
-                              <td>31 Mei 2026, 22:30</td>
-                              <td>juri_film_01</td>
-                              <td>Input Penilaian Finalis #3</td>
-                              <td><span class="badge accepted"><span class="badge-dot-indicator"></span>Sukses</span></td>
-                            </tr>
-                            <tr>
-                              <td>31 Mei 2026, 20:15</td>
-                              <td>system_cron</td>
-                              <td>Backup Database Harian</td>
-                              <td><span class="badge accepted"><span class="badge-dot-indicator"></span>Sukses</span></td>
-                            </tr>
-                            <tr>
-                              <td>31 Mei 2026, 18:40</td>
-                              <td>admin_nabil</td>
-                              <td>Hapus akun duplikat NIM 2241...</td>
-                              <td><span class="badge accepted"><span class="badge-dot-indicator"></span>Sukses</span></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <!-- Pagination UI widget -->
-                      <div class="table-pagination">
-                        <span>Menampilkan 1-5 dari 144 log</span>
-                        <div class="pagination-controls">
-                          <button class="pagination-btn" aria-label="Sebelumnya"><i class="fa-solid fa-angle-left"></i></button>
-                          <button class="pagination-btn active">1</button>
-                          <button class="pagination-btn">2</button>
-                          <button class="pagination-btn">3</button>
-                          <button class="pagination-btn" aria-label="Selanjutnya"><i class="fa-solid fa-angle-right"></i></button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div style="display: flex; flex-direction: column; gap: var(--space-5);">
-                      <!-- Visual Bar Chart Card -->
-                      <div class="card">
-                        <h3>Distribusi Pendaftaran</h3>
-                        <p>Statistik pendaftaran tim per fakultas.</p>
-                        <div class="mock-bar-chart">
-                          <div class="mock-chart-column">
-                            <div class="mock-chart-bar" style="height: 75px;"></div>
-                            <span class="mock-chart-label">FTIK</span>
-                          </div>
-                          <div class="mock-chart-column">
-                            <div class="mock-chart-bar" style="height: 40px;"></div>
-                            <span class="mock-chart-label">FEBI</span>
-                          </div>
-                          <div class="mock-chart-column">
-                            <div class="mock-chart-bar" style="height: 62px;"></div>
-                            <span class="mock-chart-label">FASYA</span>
-                          </div>
-                          <div class="mock-chart-column">
-                            <div class="mock-chart-bar" style="height: 90px;"></div>
-                            <span class="mock-chart-label">FUAH</span>
-                          </div>
-                          <div class="mock-chart-column">
-                            <div class="mock-chart-bar" style="height: 25px;"></div>
-                            <span class="mock-chart-label">Pasca</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <h3>Registrasi Baru</h3>
-                        <p>Statistik pendaftaran akun hari ini.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #ffffff; border-radius: var(--radius-xs); border: 1px solid var(--color-border-default); margin-bottom: var(--space-2);">
-                          <div>
-                            <strong>Peserta Baru</strong>
-                            <div style="font-size: 9px; color: var(--color-text-primary);">Total terverifikasi</div>
-                          </div>
-                          <span class="stat-value" style="font-size: 18px; color: var(--color-surface-muted); font-weight: 800;">+24</span>
-                        </div>
-                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #ffffff; border-radius: var(--radius-xs); border: 1px solid var(--color-border-default);">
-                          <div>
-                            <strong>Verifikasi Pending</strong>
-                            <div style="font-size: 9px; color: var(--color-text-primary);">Butuh approval panitia</div>
-                          </div>
-                          <span class="stat-value" style="font-size: 18px; color: #b45309; font-weight: 800;">18</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </main>
-            </div>
-          </div>
-        </div>
+    <!-- ===== JURI ===== -->
+    <section class="dg-group" id="group-juri">
+      <header class="dg-group-head">
+        <span class="dg-group-tag">Block E</span>
+        <h2 class="dg-group-title">Dashboard Juri</h2>
+        <p class="dg-group-desc">Penilaian penyisihan dan final dengan input bobot per aspek + riwayat.</p>
+      </header>
+      <div class="dg-notice"><strong>Catatan:</strong> Iframe-iframe di bawah otomatis login sebagai user juri pertama di database via design/preview.php (dev only, hanya jalan dari localhost). Tampilan akan langsung menjadi dashboard sebenarnya — bukan halaman login.</div>
+      <div class="dg-grid">
+        <figure class="dg-frame">
+          <figcaption>Dashboard<a class="dg-frame-open" href="preview.php?role=juri&page=dashboard.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=juri&page=dashboard.php" loading="lazy"
+            title="Juri Dashboard"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Penilaian Penyisihan<a class="dg-frame-open" href="preview.php?role=juri&page=penilaian-penyisihan.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=juri&page=penilaian-penyisihan.php" loading="lazy"
+            title="Penilaian Penyisihan"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Penilaian Final<a class="dg-frame-open" href="preview.php?role=juri&page=penilaian-final.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=juri&page=penilaian-final.php" loading="lazy"
+            title="Penilaian Final"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Riwayat Penilaian<a class="dg-frame-open" href="preview.php?role=juri&page=riwayat-penilaian.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=juri&page=riwayat-penilaian.php" loading="lazy"
+            title="Riwayat"></iframe>
+        </figure>
       </div>
+    </section>
 
-
-      <!-- ============================================================
-           FRAME 6: Desktop - Panitia Dashboard
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-panitia">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-users-gear"></i> 6. Desktop - Panitia Dashboard</span>
-          <span class="frame-dimensions">1440 × 950</span>
-        </div>
-        <div class="figma-frame height-dashboard">
-          <div class="frame-viewport">
-            <div class="dashboard-layout">
-              <!-- Sidebar -->
-              <aside class="dashboard-sidebar">
-                <div class="sidebar-brand">
-                  <span class="brand-mark" style="width: 28px; height: 28px; font-size: 14px;">P</span>
-                  <span>PESOMA 2026</span>
-                </div>
-                <div class="sidebar-menu-title">Main Portal</div>
-                <nav class="sidebar-menu" style="margin-bottom: var(--space-4);">
-                  <a href="#frame-panitia" class="sidebar-menu-item"><i class="fa-solid fa-chart-line"></i> Ringkasan</a>
-                  <a href="#frame-panitia" class="sidebar-menu-item active"><i class="fa-solid fa-file-shield"></i> Verifikasi Berkas</a>
-                  <a href="#frame-panitia" class="sidebar-menu-item"><i class="fa-solid fa-folder-open"></i> Kelola Karya</a>
-                </nav>
-                <div class="sidebar-menu-title">Jury Operations</div>
-                <nav class="sidebar-menu">
-                  <a href="#frame-panitia" class="sidebar-menu-item"><i class="fa-solid fa-list-check"></i> Distribusi Juri</a>
-                  <a href="#frame-panitia" class="sidebar-menu-item"><i class="fa-solid fa-bullhorn"></i> Informasi</a>
-                </nav>
-                <div class="sidebar-footer">
-                  <div class="sidebar-user-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">PA</div>
-                  <div class="sidebar-user-info">
-                    <span class="sidebar-user-name">Ahmad Zaki</span>
-                    <span class="sidebar-user-role">Panitia Pelaksana</span>
-                  </div>
-                </div>
-              </aside>
-              <!-- Main Content -->
-              <main class="dashboard-main">
-                <header class="dashboard-header">
-                  <div class="dashboard-title">Verifikasi Berkas Mahasiswa</div>
-                  <div class="dashboard-actions">
-                    <div class="dashboard-search">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                      <input type="text" placeholder="Cari NIM/Nama...">
-                    </div>
-                    <button class="icon-btn" aria-label="Notifikasi">
-                      <i class="fa-regular fa-bell"></i>
-                    </button>
-                  </div>
-                </header>
-                <div class="dashboard-content">
-                  <!-- Filter Bar -->
-                  <div class="card mb-4" style="padding: 12px; display: flex; gap: var(--space-2); flex-direction: row; align-items: center; border-radius: var(--radius-xs);">
-                    <button class="btn primary" style="padding: 6px 12px; font-size: var(--font-size-sm); min-height: auto;">Pendaftaran Pending (12)</button>
-                    <button class="btn secondary" style="padding: 6px 12px; font-size: var(--font-size-sm); min-height: auto; border: none;">Sudah Diverifikasi (84)</button>
-                    <button class="btn secondary" style="padding: 6px 12px; font-size: var(--font-size-sm); min-height: auto; border: none;">Berkas Ditolak (5)</button>
-                  </div>
-
-                  <!-- Content Layout -->
-                  <div class="dashboard-grid-main">
-                    <div class="card" style="display: flex; flex-direction: column;">
-                      <div class="table-responsive" style="flex: 1;">
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>NIM / Nama</th>
-                              <th>Cabang Lomba</th>
-                              <th>Karya / Dokumen</th>
-                              <th>Aksi</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr style="background: #fdfbf7;">
-                              <td>
-                                <strong>2241010992</strong>
-                                <div style="font-size: 10px; color: var(--color-text-primary);">Rian Adi Wijaya (FTIK)</div>
-                              </td>
-                              <td>Film Pendek (Kelompok)</td>
-                              <td><a href="#frame-panitia" style="color: var(--color-surface-muted); font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> KRS_KTMS.pdf</a></td>
-                              <td>
-                                <div style="display: flex; gap: 4px;">
-                                  <button class="btn primary" style="padding: 4px 8px; font-size: 9px; min-height: auto; background: var(--color-accent); border: none;" aria-label="Terima"><i class="fa-solid fa-check"></i></button>
-                                  <button class="btn primary" style="padding: 4px 8px; font-size: 9px; min-height: auto; background: #ef4444; border: none;" aria-label="Tolak"><i class="fa-solid fa-xmark"></i></button>
-                                  <button class="btn secondary" style="padding: 4px 8px; font-size: 9px; min-height: auto;" aria-label="Detail"><i class="fa-solid fa-eye"></i></button>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <strong>2241021401</strong>
-                                <div style="font-size: 10px; color: var(--color-text-primary);">Siti Aminah (FEBI)</div>
-                              </td>
-                              <td>Inovasi Sains (Individu)</td>
-                              <td><a href="#frame-panitia" style="color: var(--color-surface-muted); font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> Proposal.pdf</a></td>
-                              <td>
-                                <div style="display: flex; gap: 4px;">
-                                  <button class="btn primary" style="padding: 4px 8px; font-size: 9px; min-height: auto; background: var(--color-accent); border: none;" aria-label="Terima"><i class="fa-solid fa-check"></i></button>
-                                  <button class="btn primary" style="padding: 4px 8px; font-size: 9px; min-height: auto; background: #ef4444; border: none;" aria-label="Tolak"><i class="fa-solid fa-xmark"></i></button>
-                                  <button class="btn secondary" style="padding: 4px 8px; font-size: 9px; min-height: auto;" aria-label="Detail"><i class="fa-solid fa-eye"></i></button>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <strong>2241030112</strong>
-                                <div style="font-size: 10px; color: var(--color-text-primary);">Doni Saputra (FASYA)</div>
-                              </td>
-                              <td>Catur Klasik (Individu)</td>
-                              <td><a href="#frame-panitia" style="color: var(--color-surface-muted); font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> KTM.pdf</a></td>
-                              <td>
-                                <div style="display: flex; gap: 4px;">
-                                  <button class="btn primary" style="padding: 4px 8px; font-size: 9px; min-height: auto; background: var(--color-accent); border: none;" aria-label="Terima"><i class="fa-solid fa-check"></i></button>
-                                  <button class="btn primary" style="padding: 4px 8px; font-size: 9px; min-height: auto; background: #ef4444; border: none;" aria-label="Tolak"><i class="fa-solid fa-xmark"></i></button>
-                                  <button class="btn secondary" style="padding: 4px 8px; font-size: 9px; min-height: auto;" aria-label="Detail"><i class="fa-solid fa-eye"></i></button>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <!-- Pagination UI widget -->
-                      <div class="table-pagination">
-                        <span>Menampilkan 1-3 dari 12 antrean</span>
-                        <div class="pagination-controls">
-                          <button class="pagination-btn" aria-label="Sebelumnya"><i class="fa-solid fa-angle-left"></i></button>
-                          <button class="pagination-btn active">1</button>
-                          <button class="pagination-btn">2</button>
-                          <button class="pagination-btn" aria-label="Selanjutnya"><i class="fa-solid fa-angle-right"></i></button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card">
-                      <h3>Preview Berkas</h3>
-                      <div style="border: 1px solid var(--color-border-default); border-radius: var(--radius-xs); padding: var(--space-4); background: #ffffff; text-align: center;">
-                        <div style="font-size: 24px; color: var(--color-text-primary); margin-bottom: var(--space-2);"><i class="fa-regular fa-file-pdf"></i></div>
-                        <strong style="display: block; font-size: var(--font-size-md);">KRS_KTMS.pdf</strong>
-                        <span style="font-size: 9px; color: var(--color-text-primary);">1.4 MB - PDF Document</span>
-                        <hr style="border: none; border-top: 1px solid var(--color-border-default); margin: var(--space-3) 0;">
-                        <div style="text-align: left; font-size: var(--font-size-sm); color: var(--color-text-inverse);">
-                          <strong>Data Verifikasi:</strong>
-                          <div class="mt-2">Nama: Rian Adi Wijaya</div>
-                          <div>NIM: 2241010992</div>
-                          <div>Status KRS: Semester Genap Aktif</div>
-                        </div>
-                        <button class="btn primary w-full mt-4" style="background: var(--color-accent); border: none;">Verifikasi Valid</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </main>
-            </div>
-          </div>
-        </div>
+    <!-- ===== PESERTA ===== -->
+    <section class="dg-group" id="group-peserta">
+      <header class="dg-group-head">
+        <span class="dg-group-tag">Block F</span>
+        <h2 class="dg-group-title">Dashboard Peserta</h2>
+        <p class="dg-group-desc">Daftar lomba, upload karya (dengan preview file), status pendaftaran, tim, pengumuman
+          pribadi.</p>
+      </header>
+      <div class="dg-notice"><strong>Catatan:</strong> Iframe-iframe di bawah otomatis login sebagai user peserta pertama di database via design/preview.php (dev only, hanya jalan dari localhost). Tampilan akan langsung menjadi dashboard sebenarnya — bukan halaman login.</div>
+      <div class="dg-grid">
+        <figure class="dg-frame">
+          <figcaption>Dashboard<a class="dg-frame-open" href="preview.php?role=peserta&page=dashboard.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=peserta&page=dashboard.php" loading="lazy"
+            title="Peserta Dashboard"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Daftar Lomba<a class="dg-frame-open" href="preview.php?role=peserta&page=daftar-lomba.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=peserta&page=daftar-lomba.php" loading="lazy"
+            title="Daftar Lomba"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Upload Karya<a class="dg-frame-open" href="preview.php?role=peserta&page=upload-karya.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=peserta&page=upload-karya.php" loading="lazy"
+            title="Upload Karya"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Status Pendaftaran<a class="dg-frame-open" href="preview.php?role=peserta&page=status-pendaftaran.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=peserta&page=status-pendaftaran.php" loading="lazy"
+            title="Status Pendaftaran"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Tim Saya<a class="dg-frame-open" href="preview.php?role=peserta&page=tim-saya.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=peserta&page=tim-saya.php" loading="lazy"
+            title="Tim Saya"></iframe>
+        </figure>
+        <figure class="dg-frame">
+          <figcaption>Pengumuman Saya<a class="dg-frame-open" href="preview.php?role=peserta&page=pengumuman-saya.php" target="_blank" rel="noopener">Open</a></figcaption><iframe src="preview.php?role=peserta&page=pengumuman-saya.php" loading="lazy"
+            title="Pengumuman Saya"></iframe>
+        </figure>
       </div>
+    </section>
 
+  </main>
 
-      <!-- ============================================================
-           FRAME 7: Desktop - Juri Dashboard
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-juri">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-gavel"></i> 7. Desktop - Juri Dashboard</span>
-          <span class="frame-dimensions">1440 × 950</span>
-        </div>
-        <div class="figma-frame height-dashboard">
-          <div class="frame-viewport">
-            <div class="dashboard-layout">
-              <!-- Sidebar -->
-              <aside class="dashboard-sidebar">
-                <div class="sidebar-brand">
-                  <span class="brand-mark" style="width: 28px; height: 28px; font-size: 14px;">P</span>
-                  <span>PESOMA 2026</span>
-                </div>
-                <div class="sidebar-menu-title">Main Portal</div>
-                <nav class="sidebar-menu" style="margin-bottom: var(--space-4);">
-                  <a href="#frame-juri" class="sidebar-menu-item"><i class="fa-solid fa-house"></i> Beranda Juri</a>
-                  <a href="#frame-juri" class="sidebar-menu-item active"><i class="fa-solid fa-pen-to-square"></i> Penilaian Karya</a>
-                </nav>
-                <div class="sidebar-menu-title">Grades & Notes</div>
-                <nav class="sidebar-menu">
-                  <a href="#frame-juri" class="sidebar-menu-item"><i class="fa-solid fa-list-ol"></i> Peringkat Nilai</a>
-                  <a href="#frame-juri" class="sidebar-menu-item"><i class="fa-solid fa-comments"></i> Catatan Juri</a>
-                </nav>
-                <div class="sidebar-footer">
-                  <div class="sidebar-user-avatar" style="background: linear-gradient(135deg, #7c3aed, #6d28d9);">JR</div>
-                  <div class="sidebar-user-info">
-                    <span class="sidebar-user-name">Prof. Sugeng</span>
-                    <span class="sidebar-user-role">Dewan Juri Film</span>
-                  </div>
-                </div>
-              </aside>
-              <!-- Main Content -->
-              <main class="dashboard-main">
-                <header class="dashboard-header">
-                  <div class="dashboard-title">Lembar Penilaian Karya</div>
-                  <div class="dashboard-actions">
-                    <span class="badge finalist"><span class="badge-dot-indicator"></span>Penjurian Tahap Final</span>
-                    <button class="icon-btn" aria-label="Notifikasi">
-                      <i class="fa-regular fa-bell"></i>
-                    </button>
-                  </div>
-                </header>
-                <div class="dashboard-content">
-                  <div class="dashboard-grid-main">
-                    <!-- Media Player Card -->
-                    <div class="card">
-                      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
-                        <div>
-                          <h3 style="margin-bottom: 2px;">Karya: Lentera Harapan Kampus</h3>
-                          <p style="margin-bottom: 0;">Oleh: Tim Kreatif FUAH · Kategori: Film Pendek</p>
-                        </div>
-                        <span class="badge accepted"><span class="badge-dot-indicator"></span>Penyisihan #1</span>
-                      </div>
-                      
-                      <!-- Video Player Mock -->
-                      <div class="video-player-mock mb-4">
-                        <button class="video-play-btn" aria-label="Play Video"><i class="fa-solid fa-play"></i></button>
-                        <div class="video-controls-mock">
-                          <i class="fa-solid fa-pause" style="cursor: pointer;" aria-hidden="true"></i>
-                          <span>03:45 / 10:00</span>
-                          <div class="video-timeline-mock">
-                            <div class="video-timeline-progress"></div>
-                          </div>
-                          <i class="fa-solid fa-volume-high" aria-hidden="true"></i>
-                          <i class="fa-solid fa-expand" style="cursor: pointer;" aria-hidden="true"></i>
-                        </div>
-                      </div>
+  <footer class="dg-foot">
+    <span>Source of truth: pages/, src/auth/, src/{admin,panitia,juri,peserta}/. Stylesheet:
+      assets/css/pesoma-public.css & assets/css/dashboard-pesoma.css.</span>
+  </footer>
+</body>
 
-                      <h3>Deskripsi Karya:</h3>
-                      <p>Sebuah narasi sinematik yang menceritakan perjuangan seorang mahasiswa UIN SAIZU dalam menyeimbangkan pengabdian sosial dengan tanggung jawab akademis, dikemas dalam estetika visual tinggi.</p>
-                    </div>
-
-                    <!-- Evaluation Form -->
-                    <div class="card">
-                      <h3>Input Form Penilaian</h3>
-                      <p>Berikan nilai secara obyektif berdasarkan kriteria yang telah ditentukan.</p>
-                      
-                      <div class="form-group">
-                        <label for="score-1">Orisinalitas & Ide Cerita (30%)</label>
-                        <input type="number" id="score-1" min="0" max="100" value="88">
-                      </div>
-                      <div class="form-group">
-                        <label for="score-2">Kualitas Teknis & Editing (40%)</label>
-                        <input type="number" id="score-2" min="0" max="100" value="85">
-                      </div>
-                      <div class="form-group">
-                        <label for="score-3">Penyampaian Pesan & Tema (30%)</label>
-                        <input type="number" id="score-3" min="0" max="100" value="90">
-                      </div>
-                      <div class="form-group">
-                        <label for="score-comment">Ulasan Juri</label>
-                        <textarea id="score-comment" rows="3" placeholder="Tulis masukan konstruktif untuk karya ini..."></textarea>
-                      </div>
-                      
-                      <div style="background: var(--color-surface-strong); padding: 12px; border-radius: var(--radius-xs); border: 1px solid var(--color-border-default); display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
-                        <strong style="color: var(--color-text-inverse);">Nilai Akhir:</strong>
-                        <strong style="font-size: var(--font-size-xl); color: var(--color-surface-muted);">87.4 / 100</strong>
-                      </div>
-
-                      <button class="btn primary w-full">Simpan & Submit Nilai</button>
-                    </div>
-                  </div>
-                </div>
-              </main>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ============================================================
-           FRAME 8: Desktop - Peserta Dashboard
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-peserta">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-graduation-cap"></i> 8. Desktop - Peserta Dashboard</span>
-          <span class="frame-dimensions">1440 × 950</span>
-        </div>
-        <div class="figma-frame height-dashboard">
-          <div class="frame-viewport">
-            <div class="dashboard-layout">
-              <!-- Sidebar -->
-              <aside class="dashboard-sidebar">
-                <div class="sidebar-brand">
-                  <span class="brand-mark" style="width: 28px; height: 28px; font-size: 14px;">P</span>
-                  <span>PESOMA 2026</span>
-                </div>
-                <div class="sidebar-menu-title">User Portal</div>
-                <nav class="sidebar-menu" style="margin-bottom: var(--space-4);">
-                  <a href="#frame-peserta" class="sidebar-menu-item active"><i class="fa-solid fa-home"></i> Dashboard</a>
-                  <a href="#frame-peserta" class="sidebar-menu-item"><i class="fa-solid fa-upload"></i> Unggah Karya</a>
-                  <a href="#frame-peserta" class="sidebar-menu-item"><i class="fa-solid fa-user-group"></i> Anggota Tim</a>
-                </nav>
-                <div class="sidebar-menu-title">Help Center</div>
-                <nav class="sidebar-menu">
-                  <a href="#frame-peserta" class="sidebar-menu-item"><i class="fa-solid fa-circle-question"></i> Bantuan</a>
-                </nav>
-                <div class="sidebar-footer">
-                  <div class="sidebar-user-avatar" style="background: linear-gradient(135deg, var(--color-surface-muted), #4f46e5);">RN</div>
-                  <div class="sidebar-user-info">
-                    <span class="sidebar-user-name">Rian Adi W.</span>
-                    <span class="sidebar-user-role">Peserta Lomba</span>
-                  </div>
-                </div>
-              </aside>
-              <!-- Main Content -->
-              <main class="dashboard-main">
-                <header class="dashboard-header">
-                  <div class="dashboard-title">Status Pendaftaran & Karya</div>
-                  <div class="dashboard-actions">
-                    <span class="badge accepted"><span class="badge-dot-indicator"></span>Registrasi Terverifikasi</span>
-                    <button class="icon-btn" aria-label="Notifikasi"><i class="fa-regular fa-bell"></i></button>
-                  </div>
-                </header>
-                <div class="dashboard-content">
-                  <!-- Pipeline Tracker -->
-                  <div class="card mb-5">
-                    <div class="pipeline">
-                      <div class="pipeline-step completed">
-                        <div class="pipeline-node"><i class="fa-solid fa-check"></i></div>
-                        <span class="pipeline-label">Daftar Akun</span>
-                      </div>
-                      <div class="pipeline-step completed">
-                        <div class="pipeline-node"><i class="fa-solid fa-check"></i></div>
-                        <span class="pipeline-label">Verifikasi NIM</span>
-                      </div>
-                      <div class="pipeline-step active">
-                        <div class="pipeline-node">3</div>
-                        <span class="pipeline-label">Unggah Karya</span>
-                      </div>
-                      <div class="pipeline-step">
-                        <div class="pipeline-node">4</div>
-                        <span class="pipeline-label">Penjurian</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Grid Forms -->
-                  <div class="dashboard-grid-main">
-                    <div class="card">
-                      <h3>Kirim & Unggah Karya</h3>
-                      <p>Lengkapi formulir di bawah ini untuk mengirimkan hasil karya tim Anda secara online.</p>
-                      
-                      <div class="form-group">
-                        <label for="work-title">Judul Karya / Film</label>
-                        <input type="text" id="work-title" placeholder="Contoh: Film Lentera Harapan">
-                      </div>
-                      <div class="form-group">
-                        <label for="work-desc">Sinopsis / Penjelasan Singkat</label>
-                        <textarea id="work-desc" rows="3" placeholder="Tuliskan latar belakang dan sinopsis karya..."></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label>File Karya (Format MP4/PDF max 50MB)</label>
-                        <div class="upload-drag-area">
-                          <div class="upload-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-                          <strong style="display: block; margin-bottom: 4px;">Drag & Drop Berkas di sini</strong>
-                          <span style="font-size: 10px; color: var(--color-text-primary);">atau klik untuk memilih file dari komputer</span>
-                        </div>
-                      </div>
-                      
-                      <button class="btn primary mt-2">Kirim Karya Sekarang</button>
-                    </div>
-
-                    <div style="display: flex; flex-direction: column; gap: var(--space-5);">
-                      <div class="card accent-card">
-                        <h3>Ketentuan Karya</h3>
-                        <ul style="padding-left: var(--space-4); margin: 0; font-size: var(--font-size-sm); color: var(--color-text-primary); line-height: 1.8;">
-                          <li>Durasi Film Pendek maksimal 10 menit.</li>
-                          <li>Karya harus orisinil dan belum pernah dijuarakan di kompetisi lain.</li>
-                          <li>Resolusi minimal 1080p dengan format MP4.</li>
-                          <li>Karya tidak mengandung unsur SARA.</li>
-                        </ul>
-                      </div>
-
-                      <div class="card" style="background: rgba(16, 185, 129, 0.05); border-color: rgba(16, 185, 129, 0.2);">
-                        <h3 style="color: #065f46;"><i class="fa-solid fa-circle-info"></i> Butuh Bantuan?</h3>
-                        <p style="color: #065f46; font-size: var(--font-size-sm); margin-bottom: 0;">Hubungi support panitia di nomor WA +62 812-0000-2026 jika Anda mengalami kesulitan saat proses unggah karya.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </main>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ============================================================
-           FRAME 9: Desktop - UI Kit & Components
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-uikit">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-palette"></i> 9. Desktop - UI Kit & Components</span>
-          <span class="frame-dimensions">1440 × Auto</span>
-        </div>
-        <div class="figma-frame height-auto" style="background: #ffffff;">
-          <div class="frame-viewport" style="padding: var(--space-6);">
-            <h2 class="mb-5" style="border-bottom: 2px solid var(--color-border-default); padding-bottom: 12px; color: var(--color-text-inverse);">PESOMA 2026 UI Kit</h2>
-            
-            <!-- Typography -->
-            <div class="mb-6">
-              <h3 class="mb-4" style="color: var(--color-surface-muted);">1. Typography Hierarchy</h3>
-              <div style="display: flex; flex-direction: column; gap: var(--space-4);">
-                <div><h1 style="font-size: var(--font-size-5xl);">Heading 1 (48px)</h1><span style="font-size: 10px; color: var(--color-text-primary);">Plus Jakarta Sans Extra Bold (Hero/Titles)</span></div>
-                <div><h2 style="font-size: var(--font-size-3xl);">Heading 2 (27px)</h2><span style="font-size: 10px; color: var(--color-text-primary);">Plus Jakarta Sans Bold (Sections Title)</span></div>
-                <div><h3 style="font-size: var(--font-size-2xl);">Heading 3 (22.5px)</h3><span style="font-size: 10px; color: var(--color-text-primary);">Plus Jakarta Sans Semi Bold (Card Title)</span></div>
-                <div><h4 style="font-size: var(--font-size-xl);">Heading 4 (18px)</h4><span style="font-size: 10px; color: var(--color-text-primary);">Plus Jakarta Sans Medium (Sub-component Heading)</span></div>
-                <div><p style="font-size: var(--font-size-base);">Paragraph Body Text (14px)</p><span style="font-size: 10px; color: var(--color-text-primary);">Inter Regular (Description and Body copy)</span></div>
-              </div>
-            </div>
-
-            <!-- Colors Swatches -->
-            <div class="mb-6">
-              <h3 class="mb-4" style="color: var(--color-surface-muted);">2. Color Tokens</h3>
-              <div class="ui-kit-row">
-                <div class="color-swatch-card">
-                  <div class="color-swatch" style="background: #0b2f9f;"></div>
-                  <div class="color-swatch-info">
-                    <div class="color-swatch-name">Brand Blue</div>
-                    <span>#0b2f9f</span>
-                  </div>
-                </div>
-                <div class="color-swatch-card">
-                  <div class="color-swatch" style="background: #000000;"></div>
-                  <div class="color-swatch-info">
-                    <div class="color-swatch-name">Brand Dark</div>
-                    <span>#000000</span>
-                  </div>
-                </div>
-                <div class="color-swatch-card">
-                  <div class="color-swatch" style="background: #64748b;"></div>
-                  <div class="color-swatch-info">
-                    <div class="color-swatch-name">Text Primary</div>
-                    <span>#64748b</span>
-                  </div>
-                </div>
-                <div class="color-swatch-card">
-                  <div class="color-swatch" style="background: #1e293b;"></div>
-                  <div class="color-swatch-info">
-                    <div class="color-swatch-name">Text Inverse</div>
-                    <span>#1e293b</span>
-                  </div>
-                </div>
-                <div class="color-swatch-card">
-                  <div class="color-swatch" style="background: #f1f5f9;"></div>
-                  <div class="color-swatch-info">
-                    <div class="color-swatch-name">Surface Card</div>
-                    <span>#f1f5f9</span>
-                  </div>
-                </div>
-                <div class="color-swatch-card">
-                  <div class="color-swatch" style="background: #e5e7eb;"></div>
-                  <div class="color-swatch-info">
-                    <div class="color-swatch-name">Border Default</div>
-                    <span>#e5e7eb</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Interactive Components -->
-            <div class="mb-6">
-              <h3 class="mb-4" style="color: var(--color-surface-muted);">3. Buttons</h3>
-              <div class="ui-kit-row">
-                <button class="btn primary">Primary Button</button>
-                <button class="btn secondary">Secondary Button</button>
-                <button class="btn ghost">Ghost Button</button>
-              </div>
-            </div>
-
-            <!-- Badges & Status Pills -->
-            <div class="mb-6">
-              <h3 class="mb-4" style="color: var(--color-surface-muted);">4. Status Badges</h3>
-              <div class="ui-kit-row">
-                <span class="badge pending"><span class="badge-dot-indicator"></span>Pending</span>
-                <span class="badge accepted"><span class="badge-dot-indicator"></span>Diterima</span>
-                <span class="badge finalist"><span class="badge-dot-indicator"></span>Finalis</span>
-                <span class="badge winner"><span class="badge-dot-indicator"></span>Juara</span>
-              </div>
-            </div>
-
-            <!-- Form Elements -->
-            <div>
-              <h3 class="mb-4" style="color: var(--color-surface-muted);">5. Form Input Fields</h3>
-              <div style="max-width: 320px;">
-                <div class="form-group">
-                  <label>Text Field Label</label>
-                  <input type="text" placeholder="Masukkan teks di sini...">
-                </div>
-                <div class="form-group">
-                  <label>Select Dropdown Label</label>
-                  <select>
-                    <option>Pilih Opsi...</option>
-                    <option>Opsi #1</option>
-                    <option>Opsi #2</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ============================================================
-           FRAME 10: Desktop - Detail Cabang Lomba
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-detaillomba">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-trophy"></i> 10. Desktop - Detail Cabang Lomba</span>
-          <span class="frame-dimensions">1440 × Auto</span>
-        </div>
-        <div class="figma-frame height-auto">
-          <div class="frame-viewport">
-            <header class="landing-header">
-              <div class="navbar">
-                <a href="#frame-landing" class="brand">
-                  <span class="brand-mark">P</span>
-                  <div class="brand-text">
-                    <span>PESOMA 2026</span>
-                    <small>UIN SAIZU Purwokerto</small>
-                  </div>
-                </a>
-                <div class="nav-links">
-                  <a href="#frame-landing">Beranda</a>
-                  <a href="#lomba" class="active">Cabang Lomba</a>
-                  <a href="#jadwal">Jadwal</a>
-                  <a href="#pengumuman">Pengumuman</a>
-                  <a href="#tentang">Tentang</a>
-                  <a href="#frame-login" class="btn primary" style="padding: 6px 14px; min-height: auto; font-size: 10px;" onclick="document.getElementById('frame-login').scrollIntoView({behavior: 'smooth', block: 'center'});">Login Portal</a>
-                </div>
-              </div>
-            </header>
-
-            <main>
-              <!-- Hero Section -->
-              <section class="hero">
-                <div class="hero-grid-mesh"></div>
-                <div class="hero-inner">
-                  <div class="hero-content">
-                    <div class="hero-eyebrow">
-                      <span class="dot"></span>
-                      Detail Cabang Lomba
-                    </div>
-                    <h1>Film Pendek</h1>
-                    <p class="hero-desc">
-                      Kompetisi produksi film pendek bertema kreatif, edukatif, dan inspiratif bagi mahasiswa UIN Prof. K.H. Saifuddin Zuhri Purwokerto. Tunjukkan kemampuan sinematografi kelompok Anda.
-                    </p>
-                    <div class="hero-actions">
-                      <a href="#frame-register" class="btn primary" onclick="document.getElementById('frame-register').scrollIntoView({behavior: 'smooth', block: 'center'});">Daftar / Login</a>
-                      <a href="#frame-unduhjuknis" class="btn secondary" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: white !important;" onclick="document.getElementById('frame-unduhjuknis').scrollIntoView({behavior: 'smooth', block: 'center'});">Unduh Juknis</a>
-                    </div>
-                    <div style="display: flex; gap: 15px; margin-top: 24px; font-size: 11px; color: #94a3b8; font-weight: 600;">
-                      <span><i class="fa-solid fa-users" style="color: var(--color-primary-light);"></i> Kelompok (2-5 Anggota)</span>
-                      <span><i class="fa-solid fa-chalkboard-user" style="color: var(--color-accent);"></i> Pendamping Wajib</span>
-                      <span><i class="fa-solid fa-code" style="color: #a78bfa;"></i> Kode: FLM-01</span>
-                    </div>
-                  </div>
-                  <div class="hero-panel">
-                    <div class="hero-panel-card">
-                      <span class="hero-panel-label" style="background: rgba(239, 68, 68, 0.15); color: #f87171;">Batas Pendaftaran</span>
-                      <strong>15 Mei 2026</strong>
-                      <span>Pendaftaran & verifikasi berkas KTM wajib diselesaikan.</span>
-                    </div>
-                    <div class="hero-panel-card">
-                      <span class="hero-panel-label" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">Batas Upload Karya</span>
-                      <strong>20 Mei 2026</strong>
-                      <span>Unggah video film pendek (MP4) di dashboard peserta.</span>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Main Content Grid -->
-              <section class="section" style="background: #ffffff; padding: var(--space-6) var(--space-6) var(--space-8);">
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-6); max-width: 1200px; margin: 0 auto;">
-                  
-                  <div style="display: flex; flex-direction: column; gap: var(--space-5);">
-                    <article class="card accent-card">
-                      <h3>Deskripsi Cabang Lomba</h3>
-                      <p style="color: var(--color-text-inverse);">Kompetisi Film Pendek PESOMA 2026 bertujuan untuk mengasah kreativitas mahasiswa dalam memproduksi karya audio-visual yang menginspirasi. Tema tahun ini berfokus pada <strong>"Integrasi Nilai Keislaman, Riset, dan Teknologi untuk Kemanusiaan"</strong>.</p>
-                      <p style="color: var(--color-text-inverse); margin-top: 10px;">Setiap kelompok peserta diwajibkan menyusun ide cerita orisinil yang relevan dengan kehidupan kampus dan kemasyarakatan, serta mengemasnya dengan nilai estetika sinematografi yang tinggi.</p>
-                    </article>
-
-                    <article class="card accent-card">
-                      <h3>Ketentuan Khusus & Aturan Lomba</h3>
-                      <ul style="padding-left: var(--space-4); margin: 0; font-size: var(--font-size-sm); color: var(--color-text-inverse); line-height: 1.8;">
-                        <li>Peserta adalah mahasiswa aktif UIN SAIZU Purwokerto (dibuktikan dengan KTM/KTMS).</li>
-                        <li>Satu kelompok terdiri dari 2 hingga 5 orang dari fakultas yang sama.</li>
-                        <li>Durasi film pendek minimal 5 menit dan maksimal 10 menit (termasuk credit title).</li>
-                        <li>Karya harus orisinil, belum pernah dijuarakan di kompetisi lain, dan bebas dari unsur SARA.</li>
-                        <li>Format video wajib MP4 resolusi minimal Full HD (1080p).</li>
-                        <li>Setiap tim wajib didampingi oleh 1 Dosen Pendamping yang terdaftar resmi.</li>
-                      </ul>
-                    </article>
-
-                    <article class="card">
-                      <h3>Bobot Aspek Penilaian Juri</h3>
-                      <div class="table-responsive" style="margin-top: 12px;">
-                        <table style="width: 100%;">
-                          <thead>
-                            <tr>
-                              <th style="background: #f8fafc; border-bottom: 2px solid var(--color-border-default);">Aspek Penilaian</th>
-                              <th style="background: #f8fafc; border-bottom: 2px solid var(--color-border-default); text-align: right;">Bobot</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td style="border-bottom: 1px solid var(--color-border-default);">Orisinalitas Ide & Kreativitas Skenario</td>
-                              <td style="border-bottom: 1px solid var(--color-border-default); text-align: right; font-weight: 700; color: var(--color-surface-muted);">30%</td>
-                            </tr>
-                            <tr>
-                              <td style="border-bottom: 1px solid var(--color-border-default);">Kualitas Penyutradaraan & Teknis (Sinematografi, Suara, Editing)</td>
-                              <td style="border-bottom: 1px solid var(--color-border-default); text-align: right; font-weight: 700; color: var(--color-surface-muted);">40%</td>
-                            </tr>
-                            <tr>
-                              <td style="border-bottom: 1px solid var(--color-border-default);">Kesesuaian Tema & Kekuatan Pesan Moral</td>
-                              <td style="border-bottom: 1px solid var(--color-border-default); text-align: right; font-weight: 700; color: var(--color-surface-muted);">30%</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </article>
-                  </div>
-
-                  <div style="display: flex; flex-direction: column; gap: var(--space-5);">
-                    <div class="card" style="background: #f8fafc;">
-                      <h3>Jadwal Penting</h3>
-                      <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px;">
-                        <div style="border-left: 2px solid var(--color-surface-muted); padding-left: 10px;">
-                          <small style="color: var(--color-text-primary); font-weight: 700; text-transform: uppercase;">01 - 15 Mei 2026</small>
-                          <strong style="display: block; font-size: 12px; color: var(--color-text-inverse);">Registrasi & Berkas</strong>
-                        </div>
-                        <div style="border-left: 2px solid var(--color-surface-muted); padding-left: 10px;">
-                          <small style="color: var(--color-text-primary); font-weight: 700; text-transform: uppercase;">16 - 20 Mei 2026</small>
-                          <strong style="display: block; font-size: 12px; color: var(--color-text-inverse);">Batas Akhir Upload Karya</strong>
-                        </div>
-                        <div style="border-left: 2px solid var(--color-surface-muted); padding-left: 10px;">
-                          <small style="color: var(--color-text-primary); font-weight: 700; text-transform: uppercase;">21 - 30 Mei 2026</small>
-                          <strong style="display: block; font-size: 12px; color: var(--color-text-inverse);">Proses Penilaian Juri</strong>
-                        </div>
-                        <div style="border-left: 2px solid var(--color-accent); padding-left: 10px;">
-                          <small style="color: var(--color-accent); font-weight: 700; text-transform: uppercase;">05 Juni 2026</small>
-                          <strong style="display: block; font-size: 12px; color: var(--color-text-inverse);">Grand Final & Awarding</strong>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card" style="background: rgba(11, 47, 159, 0.05); border-color: rgba(11, 47, 159, 0.15); text-align: center;">
-                      <div style="font-size: 32px; color: var(--color-surface-muted); margin-bottom: 8px;"><i class="fa-regular fa-file-pdf"></i></div>
-                      <h3>Petunjuk Teknis</h3>
-                      <p>Unduh dokumen juknis resmi cabang Film Pendek untuk mempelajari panduan lengkap penjurian dan teknis karya.</p>
-                      <a href="#frame-unduhjuknis" class="btn primary w-full" onclick="document.getElementById('frame-unduhjuknis').scrollIntoView({behavior: 'smooth', block: 'center'});"><i class="fa-solid fa-download"></i> Unduh Juknis (PDF)</a>
-                    </div>
-                  </div>
-
-                </div>
-              </section>
-            </main>
-
-            <footer>
-              <p>© 2026 PESOMA UIN Prof. K.H. Saifuddin Zuhri Purwokerto. All Rights Reserved.</p>
-              <p>Email: <a href="mailto:pesoma@uinsaizu.ac.id">pesoma@uinsaizu.ac.id</a> · Telp: +62 812-0000-2026</p>
-            </footer>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ============================================================
-           FRAME 11: Desktop - Unduh Juknis
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-unduhjuknis">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-file-pdf"></i> 11. Desktop - Unduh Juknis</span>
-          <span class="frame-dimensions">1440 × Auto</span>
-        </div>
-        <div class="figma-frame height-auto">
-          <div class="frame-viewport">
-            <header class="landing-header">
-              <div class="navbar">
-                <a href="#frame-landing" class="brand">
-                  <span class="brand-mark">P</span>
-                  <div class="brand-text">
-                    <span>PESOMA 2026</span>
-                    <small>UIN SAIZU Purwokerto</small>
-                  </div>
-                </a>
-                <div class="nav-links">
-                  <a href="#frame-landing">Beranda</a>
-                  <a href="#lomba">Cabang Lomba</a>
-                  <a href="#jadwal">Jadwal</a>
-                  <a href="#pengumuman">Pengumuman</a>
-                  <a href="#tentang">Tentang</a>
-                  <a href="#frame-login" class="btn primary" style="padding: 6px 14px; min-height: auto; font-size: 10px;" onclick="document.getElementById('frame-login').scrollIntoView({behavior: 'smooth', block: 'center'});">Login Portal</a>
-                </div>
-              </div>
-            </header>
-
-            <main>
-              <!-- Hero Section -->
-              <section class="hero">
-                <div class="hero-grid-mesh"></div>
-                <div class="hero-inner">
-                  <div class="hero-content">
-                    <div class="hero-eyebrow">
-                      <span class="dot"></span>
-                      Panduan Peserta
-                    </div>
-                    <h1>Unduh Petunjuk Teknis</h1>
-                    <p class="hero-desc">
-                      Temukan dan unduh dokumen Petunjuk Teknis (Juknis) resmi dari setiap cabang lomba. Pahami ketentuan teknis secara detail sebelum memproduksi karya.
-                    </p>
-                    <div class="hero-actions">
-                      <a href="#lomba" class="btn primary" onclick="document.getElementById('frame-landing').scrollIntoView({behavior: 'smooth', block: 'center'});">Lihat Cabang Lomba</a>
-                      <a href="#frame-register" class="btn secondary" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: white !important;" onclick="document.getElementById('frame-register').scrollIntoView({behavior: 'smooth', block: 'center'});">Registrasi Akun</a>
-                    </div>
-                  </div>
-                  <div class="hero-panel">
-                    <div class="hero-panel-card">
-                      <span class="hero-panel-label">Total Dokumen</span>
-                      <strong>6 Juknis Resmi</strong>
-                      <span>Tersedia juknis lengkap dengan kriteria penilaian resmi.</span>
-                    </div>
-                    <div class="hero-panel-card">
-                      <span class="hero-panel-label">Format File</span>
-                      <strong>Portable Document Format (PDF)</strong>
-                      <span>Dapat dibaca dan diunduh di perangkat mana saja secara gratis.</span>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Document List Section -->
-              <section class="section" style="background: #ffffff; padding: var(--space-6) var(--space-6) var(--space-8);">
-                <div style="max-width: 1000px; margin: 0 auto;">
-                  
-                  <div style="display: flex; gap: var(--space-4); justify-content: center; margin-bottom: var(--space-6);">
-                    <div class="stat" style="min-width: 160px;">
-                      <span class="stat-value">6</span>
-                      <span class="stat-label">Juknis Tersedia</span>
-                    </div>
-                    <div class="stat" style="min-width: 160px;">
-                      <span class="stat-value">PDF</span>
-                      <span class="stat-label">Format Berkas</span>
-                    </div>
-                    <div class="stat" style="min-width: 160px;">
-                      <span class="stat-value">100%</span>
-                      <span class="stat-label">Panduan Resmi</span>
-                    </div>
-                  </div>
-
-                  <div class="card" style="padding: 0; overflow: hidden; border-radius: var(--radius-xs); border: 1px solid var(--color-border-default);">
-                    <div class="table-responsive">
-                      <table style="width: 100%;">
-                        <thead>
-                          <tr>
-                            <th style="background: #f8fafc; padding: var(--space-3) var(--space-4);">Cabang Lomba</th>
-                            <th style="background: #f8fafc; padding: var(--space-3) var(--space-4); text-align: center;">Ukuran File</th>
-                            <th style="background: #f8fafc; padding: var(--space-3) var(--space-4); text-align: right;">Aksi</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default);">
-                              <strong style="color: var(--color-text-inverse); font-size: 13px;"><i class="fa-solid fa-film" style="color: var(--color-surface-muted); margin-right: 8px;"></i> Juknis Cabang Film Pendek (FLM-01)</strong>
-                            </td>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default); text-align: center; color: var(--color-text-primary); font-size: 11px;">1.4 MB</td>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default); text-align: right;">
-                              <button class="btn primary" style="padding: 6px 12px; font-size: 11px; min-height: auto;"><i class="fa-solid fa-download"></i> Unduh</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default);">
-                              <strong style="color: var(--color-text-inverse); font-size: 13px;"><i class="fa-solid fa-futbol" style="color: var(--color-surface-muted); margin-right: 8px;"></i> Juknis Cabang Futsal (FTS-02)</strong>
-                            </td>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default); text-align: center; color: var(--color-text-primary); font-size: 11px;">2.1 MB</td>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default); text-align: right;">
-                              <button class="btn primary" style="padding: 6px 12px; font-size: 11px; min-height: auto;"><i class="fa-solid fa-download"></i> Unduh</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default);">
-                              <strong style="color: var(--color-text-inverse); font-size: 13px;"><i class="fa-solid fa-lightbulb" style="color: var(--color-surface-muted); margin-right: 8px;"></i> Juknis Cabang Inovasi Sains (SNS-03)</strong>
-                            </td>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default); text-align: center; color: var(--color-text-primary); font-size: 11px;">1.8 MB</td>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default); text-align: right;">
-                              <button class="btn primary" style="padding: 6px 12px; font-size: 11px; min-height: auto;"><i class="fa-solid fa-download"></i> Unduh</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default);">
-                              <strong style="color: var(--color-text-inverse); font-size: 13px;"><i class="fa-solid fa-microphone-lines" style="color: var(--color-surface-muted); margin-right: 8px;"></i> Juknis Cabang Public Speaking (PUB-04)</strong>
-                            </td>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default); text-align: center; color: var(--color-text-primary); font-size: 11px;">1.2 MB</td>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default); text-align: right;">
-                              <button class="btn primary" style="padding: 6px 12px; font-size: 11px; min-height: auto;"><i class="fa-solid fa-download"></i> Unduh</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default);">
-                              <strong style="color: var(--color-text-inverse); font-size: 13px;"><i class="fa-solid fa-palette" style="color: var(--color-surface-muted); margin-right: 8px;"></i> Juknis Cabang Desain Poster (PST-05)</strong>
-                            </td>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default); text-align: center; color: var(--color-text-primary); font-size: 11px;">1.6 MB</td>
-                            <td style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-default); text-align: right;">
-                              <button class="btn primary" style="padding: 6px 12px; font-size: 11px; min-height: auto;"><i class="fa-solid fa-download"></i> Unduh</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="padding: var(--space-4);">
-                              <strong style="color: var(--color-text-inverse); font-size: 13px;"><i class="fa-solid fa-chess" style="color: var(--color-surface-muted); margin-right: 8px;"></i> Juknis Cabang Catur Klasik (CTR-06)</strong>
-                            </td>
-                            <td style="padding: var(--space-4); text-align: center; color: var(--color-text-primary); font-size: 11px;">0.9 MB</td>
-                            <td style="padding: var(--space-4); text-align: right;">
-                              <button class="btn primary" style="padding: 6px 12px; font-size: 11px; min-height: auto;"><i class="fa-solid fa-download"></i> Unduh</button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                </div>
-              </section>
-            </main>
-
-            <footer>
-              <p>© 2026 PESOMA UIN Prof. K.H. Saifuddin Zuhri Purwokerto. All Rights Reserved.</p>
-              <p>Email: <a href="mailto:pesoma@uinsaizu.ac.id">pesoma@uinsaizu.ac.id</a> · Telp: +62 812-0000-2026</p>
-            </footer>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ============================================================
-           FRAME 12: Desktop - Detail Pengumuman
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-detailpengumuman">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-envelope-open-text"></i> 12. Desktop - Detail Pengumuman</span>
-          <span class="frame-dimensions">1440 × Auto</span>
-        </div>
-        <div class="figma-frame height-auto">
-          <div class="frame-viewport">
-            <header class="landing-header">
-              <div class="navbar">
-                <a href="#frame-landing" class="brand">
-                  <span class="brand-mark">P</span>
-                  <div class="brand-text">
-                    <span>PESOMA 2026</span>
-                    <small>UIN SAIZU Purwokerto</small>
-                  </div>
-                </a>
-                <div class="nav-links">
-                  <a href="#frame-landing">Beranda</a>
-                  <a href="#lomba">Cabang Lomba</a>
-                  <a href="#jadwal">Jadwal</a>
-                  <a href="#pengumuman" class="active">Pengumuman</a>
-                  <a href="#tentang">Tentang</a>
-                  <a href="#frame-login" class="btn primary" style="padding: 6px 14px; min-height: auto; font-size: 10px;" onclick="document.getElementById('frame-login').scrollIntoView({behavior: 'smooth', block: 'center'});">Login Portal</a>
-                </div>
-              </div>
-            </header>
-
-            <main>
-              <!-- Hero Section -->
-              <section class="hero">
-                <div class="hero-grid-mesh"></div>
-                <div class="hero-inner">
-                  <div class="hero-content">
-                    <div class="hero-eyebrow">
-                      <span class="dot"></span>
-                      Detail Pengumuman Resmi
-                    </div>
-                    <h1>Pengumuman Hasil Seleksi Administrasi & Finalis</h1>
-                    <p class="hero-desc">
-                      Selamat kepada para peserta yang lolos seleksi berkas. Temukan jadwal Technical Meeting serta prosedur pelaksanaan babak grand final secara luring.
-                    </p>
-                    <div class="hero-actions">
-                      <a href="#pengumuman" class="btn secondary" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: white !important;" onclick="document.getElementById('frame-landing').scrollIntoView({behavior: 'smooth', block: 'center'});"><i class="fa-solid fa-arrow-left"></i> Kembali ke Daftar</a>
-                    </div>
-                  </div>
-                  <div class="hero-panel">
-                    <div class="hero-panel-card">
-                      <span class="hero-panel-label" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa;">Kategori</span>
-                      <strong>Finalis Lomba</strong>
-                      <span>Pengumuman terkait daftar kandidat yang melaju ke final.</span>
-                    </div>
-                    <div class="hero-panel-card">
-                      <span class="hero-panel-label" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">Tanggal Rilis</span>
-                      <strong>31 Mei 2026</strong>
-                      <span>Dipublikasikan resmi oleh Panitia Pusat PESOMA 2026.</span>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Announcement Content -->
-              <section class="section" style="background: #ffffff; padding: var(--space-6) var(--space-6) var(--space-8);">
-                <div style="max-width: 900px; margin: 0 auto;">
-                  
-                  <article class="card" style="padding: var(--space-6); background: #ffffff;">
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px solid var(--color-border-default); padding-bottom: 15px;">
-                      <span class="badge finalist"><span class="badge-dot-indicator"></span>Finalis</span>
-                      <span style="font-size: 11px; color: var(--color-text-primary); font-weight: 600;"><i class="fa-regular fa-calendar"></i> 31 Mei 2026 · 10:30 WIB</span>
-                    </div>
-
-                    <h2 style="color: var(--color-text-inverse); font-size: var(--font-size-2xl); margin-bottom: 15px;">Daftar Finalis Cabang Lomba Film Pendek dan Inovasi Sains</h2>
-                    
-                    <p style="color: var(--color-text-inverse); font-size: 12.5px; line-height: 1.7; margin-bottom: 15px;">
-                      Berdasarkan hasil penilaian berkas portofolio dan seleksi karya oleh Dewan Juri PESOMA 2026 pada tanggal 25–30 Mei 2026, berikut diumumkan nama-nama tim/peserta yang dinyatakan lolos ke babak <strong>Grand Final secara Luring (Offline)</strong>:
-                    </p>
-
-                    <h3 style="color: var(--color-text-inverse); font-size: 14px; margin-top: 20px; margin-bottom: 8px;">A. Cabang Film Pendek (Finalis)</h3>
-                    <ol style="margin-left: 20px; color: var(--color-text-inverse); line-height: 1.8; font-size: 12px; margin-bottom: 15px;">
-                      <li><strong>Tim Lentera Harapan (FUAH)</strong> - Judul Karya: "Lentera Harapan Kampus"</li>
-                      <li><strong>Tim Saizu Creative (FTIK)</strong> - Judul Karya: "Menembus Batas Aksara"</li>
-                      <li><strong>Tim Cyber-Saizu (FEBI)</strong> - Judul Karya: "Transaksi Digital & Masa Depan"</li>
-                    </ol>
-
-                    <h3 style="color: var(--color-text-inverse); font-size: 14px; margin-top: 20px; margin-bottom: 8px;">B. Cabang Inovasi Sains (Finalis)</h3>
-                    <ol style="margin-left: 20px; color: var(--color-text-inverse); line-height: 1.8; font-size: 12px; margin-bottom: 15px;">
-                      <li><strong>Siti Aminah (FEBI)</strong> - Karya: "Aplikasi Penilaian Zakat Digital Terintegrasi"</li>
-                      <li><strong>Rian Adi Wijaya (FTIK)</strong> - Karya: "Purwarupa Sensor Pengukur Kualitas Air Sungai"</li>
-                      <li><strong>Zaky Mubarok (FASYA)</strong> - Karya: "E-Court System Mockup untuk Simulasi Peradilan"</li>
-                    </ol>
-
-                    <div style="background: rgba(11, 47, 159, 0.04); border-left: 3px solid var(--color-surface-muted); padding: 15px; border-radius: 4px; margin: 25px 0;">
-                      <strong style="display: block; color: var(--color-text-inverse); font-size: 13px; margin-bottom: 5px;"><i class="fa-solid fa-triangle-exclamation" style="color: var(--color-surface-muted);"></i> Agenda Penting Selanjutnya:</strong>
-                      <p style="color: var(--color-text-inverse); font-size: 11.5px; line-height: 1.6;">
-                        Seluruh finalis di atas diwajibkan mengikuti **Technical Meeting (TM)** yang akan diselenggarakan secara Hybrid pada:<br>
-                        <strong>Hari/Tanggal:</strong> Selasa, 02 Juni 2026<br>
-                        <strong>Waktu:</strong> 09.00 WIB s.d Selesai<br>
-                        <strong>Tempat:</strong> Aula Gedung Student Center Lantai 2 / Zoom Meeting (Link dibagikan via WhatsApp grup).
-                      </p>
-                    </div>
-
-                    <p style="color: var(--color-text-inverse); font-size: 12.5px; line-height: 1.7; margin-bottom: 25px;">
-                      Demikian pengumuman resmi ini dibuat untuk dapat dipergunakan sebagaimana mestinya. Kami mengucapkan selamat berjuang kembali di babak final, junjung tinggi sportivitas dan kreativitas!
-                    </p>
-
-                    <div style="border-top: 1px solid var(--color-border-default); padding-top: 15px; display: flex; justify-content: flex-end;">
-                      <div style="text-align: right; line-height: 1.4; color: var(--color-text-inverse); font-size: 11px;">
-                        <strong>Panitia Pelaksana PESOMA 2026</strong><br>
-                        <span>UIN Prof. K.H. Saifuddin Zuhri Purwokerto</span>
-                      </div>
-                    </div>
-                  </article>
-
-                  <div style="display: flex; justify-content: center; margin-top: 20px;">
-                    <a href="#pengumuman" class="btn secondary" onclick="document.getElementById('frame-landing').scrollIntoView({behavior: 'smooth', block: 'center'});"><i class="fa-solid fa-arrow-left"></i> Kembali ke Daftar Pengumuman</a>
-                  </div>
-
-                </div>
-              </section>
-            </main>
-
-            <footer>
-              <p>© 2026 PESOMA UIN Prof. K.H. Saifuddin Zuhri Purwokerto. All Rights Reserved.</p>
-              <p>Email: <a href="mailto:pesoma@uinsaizu.ac.id">pesoma@uinsaizu.ac.id</a> · Telp: +62 812-0000-2026</p>
-            </footer>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ============================================================
-           FRAME 13: Desktop - Hubungi Kami (Kontak)
-           ============================================================ -->
-      <div class="frame-wrapper" id="frame-kontak">
-        <div class="frame-info">
-          <span class="frame-title"><i class="fa-solid fa-address-book"></i> 13. Desktop - Hubungi Kami (Kontak)</span>
-          <span class="frame-dimensions">1440 × Auto</span>
-        </div>
-        <div class="figma-frame height-auto">
-          <div class="frame-viewport">
-            <header class="landing-header">
-              <div class="navbar">
-                <a href="#frame-landing" class="brand">
-                  <span class="brand-mark">P</span>
-                  <div class="brand-text">
-                    <span>PESOMA 2026</span>
-                    <small>UIN SAIZU Purwokerto</small>
-                  </div>
-                </a>
-                <div class="nav-links">
-                  <a href="#frame-landing">Beranda</a>
-                  <a href="#lomba">Cabang Lomba</a>
-                  <a href="#jadwal">Jadwal</a>
-                  <a href="#pengumuman">Pengumuman</a>
-                  <a href="#tentang" class="active">Tentang & Kontak</a>
-                  <a href="#frame-login" class="btn primary" style="padding: 6px 14px; min-height: auto; font-size: 10px;" onclick="document.getElementById('frame-login').scrollIntoView({behavior: 'smooth', block: 'center'});">Login Portal</a>
-                </div>
-              </div>
-            </header>
-
-            <main>
-              <!-- Hero Section -->
-              <section class="hero">
-                <div class="hero-grid-mesh"></div>
-                <div class="hero-inner">
-                  <div class="hero-content">
-                    <div class="hero-eyebrow">
-                      <span class="dot"></span>
-                      Hubungi Kami
-                    </div>
-                    <h1>Hubungi Panitia PESOMA 2026</h1>
-                    <p class="hero-desc">
-                      Punya pertanyaan seputar pendaftaran, ketentuan cabang lomba, atau kendala teknis sistem? Hubungi tim support resmi kami melalui saluran di bawah ini.
-                    </p>
-                    <div class="hero-actions">
-                      <a href="mailto:pesoma@uinsaizu.ac.id" class="btn primary"><i class="fa-regular fa-envelope"></i> Kirim Email Resmi</a>
-                      <a href="#pengumuman" class="btn secondary" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: white !important;" onclick="document.getElementById('frame-landing').scrollIntoView({behavior: 'smooth', block: 'center'});"><i class="fa-solid fa-bullhorn"></i> Lihat Pengumuman</a>
-                    </div>
-                  </div>
-                  <div class="hero-panel">
-                    <div class="hero-panel-card">
-                      <span class="hero-panel-label">Email Pelayanan</span>
-                      <strong>pesoma@uinsaizu.ac.id</strong>
-                      <span>Gunakan email resmi institusi untuk korespondensi surat.</span>
-                    </div>
-                    <div class="hero-panel-card">
-                      <span class="hero-panel-label">Sekretariat</span>
-                      <strong>Gedung Student Center SC.10</strong>
-                      <span>Pelayanan fisik panitia buka pada jam kerja (Senin-Jumat).</span>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Contact Channels Section -->
-              <section class="section" style="background: #ffffff; padding: var(--space-6) var(--space-6) var(--space-8);">
-                <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-6);">
-                  
-                  <div class="page-highlight" style="display: flex; gap: var(--space-5); justify-content: center; border: 1px solid var(--color-border-default); border-radius: var(--radius-xs); padding: var(--space-4); background: #f8fafc; margin-bottom: 20px;">
-                    <div class="stat" style="border: none; box-shadow: none; background: transparent; padding: 0;">
-                      <span class="stat-value" style="font-size: 20px; color: var(--color-surface-muted);">Email</span>
-                      <span class="stat-label">Saluran Resmi</span>
-                    </div>
-                    <div class="stat" style="border: none; box-shadow: none; background: transparent; padding: 0;">
-                      <span class="stat-value" style="font-size: 20px; color: var(--color-surface-muted);">08-16 WIB</span>
-                      <span class="stat-label">Jam Layanan</span>
-                    </div>
-                    <div class="stat" style="border: none; box-shadow: none; background: transparent; padding: 0;">
-                      <span class="stat-value" style="font-size: 20px; color: var(--color-surface-muted);">UIN SAIZU</span>
-                      <span class="stat-label">Purwokerto</span>
-                    </div>
-                  </div>
-
-                  <div class="grid-3">
-                    <article class="card">
-                      <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
-                      <h3>Alamat Kampus</h3>
-                      <p>UIN Prof. K.H. Saifuddin Zuhri Purwokerto<br>Jl. Jend. A. Yani No. 40A, Purwokerto, Jawa Tengah</p>
-                    </article>
-                    <article class="card">
-                      <div class="card-icon"><i class="fa-regular fa-envelope"></i></div>
-                      <h3>Email Support</h3>
-                      <p>pesoma@uinsaizu.ac.id<br>IT: support@uinsaizu.ac.id</p>
-                    </article>
-                    <article class="card">
-                      <div class="card-icon"><i class="fa-solid fa-building-user"></i></div>
-                      <h3>Sekretariat Lomba</h3>
-                      <p>Gedung Student Center UIN Prof. K.H. Saifuddin Zuhri. Buka pukul 08:00 - 16:00 WIB.</p>
-                    </article>
-                  </div>
-
-                  <!-- Form & Map Section -->
-                  <div class="grid-2" style="margin-top: 15px;">
-                    <!-- Inquiry Form -->
-                    <div class="card" style="padding: var(--space-5);">
-                      <h3>Form Pertanyaan & Bantuan</h3>
-                      <p>Kirimkan kendala teknis atau pertanyaan Anda langsung ke tim support panitia.</p>
-                      
-                      <div class="form-group" style="margin-top: 15px;">
-                        <label for="contact-name">Nama Lengkap</label>
-                        <input type="text" id="contact-name" placeholder="Masukkan nama Anda">
-                      </div>
-                      <div class="form-group">
-                        <label for="contact-email">Email Terdaftar</label>
-                        <input type="email" id="contact-email" placeholder="nama@student.uinsaizu.ac.id">
-                      </div>
-                      <div class="form-group">
-                        <label for="contact-message">Pesan / Detail Pertanyaan</label>
-                        <textarea id="contact-message" rows="4" placeholder="Tuliskan kendala pendaftaran atau pertanyaan detail Anda di sini..."></textarea>
-                      </div>
-                      <button class="btn primary w-full">Kirim Pesan Sekarang</button>
-                    </div>
-
-                    <!-- Mock Map Widget -->
-                    <div class="card" style="padding: var(--space-5); display: flex; flex-direction: column; justify-content: space-between;">
-                      <div>
-                        <h3>Lokasi Sekretariat Lomba</h3>
-                        <p>Berikut adalah visualisasi denah lokasi kampus UIN SAIZU Purwokerto untuk koordinasi luring.</p>
-                      </div>
-                      
-                      <!-- Mock Map Graphic -->
-                      <div style="background: #e2e8f0; border-radius: var(--radius-xs); border: 1px solid var(--color-border-default); flex: 1; min-height: 200px; margin: 15px 0; display: grid; place-items: center; position: relative; overflow: hidden;">
-                        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, #cbd5e1 25%, #94a3b8 100%); opacity: 0.15; background-size: 10px 10px; background-image: radial-gradient(#64748b 1px, transparent 1px);"></div>
-                        <div style="text-align: center; z-index: 5; padding: 15px;">
-                          <div style="font-size: 36px; color: var(--color-surface-muted); margin-bottom: 5px;"><i class="fa-solid fa-map-location-dot"></i></div>
-                          <strong style="color: var(--color-text-inverse); display: block; font-size: 12px;">Google Map Widget</strong>
-                          <span style="font-size: 10px; color: var(--color-text-primary);">UIN Prof. K.H. Saifuddin Zuhri Purwokerto</span>
-                        </div>
-                      </div>
-
-                      <a href="https://maps.google.com" target="_blank" class="btn secondary w-full" style="border-color: #cbd5e1;"><i class="fa-solid fa-up-right-from-square"></i> Buka Petunjuk Arah di Google Maps</a>
-                    </div>
-                  </div>
-
-                </div>
-              </section>
-            </main>
-
-            <footer>
-              <p>© 2026 PESOMA UIN Prof. K.H. Saifuddin Zuhri Purwokerto. All Rights Reserved.</p>
-              <p>Email: <a href="mailto:pesoma@uinsaizu.ac.id">pesoma@uinsaizu.ac.id</a> · Telp: +62 812-0000-2026</p>
-            </footer>
-          </div>
-        </div>
-      </div>
-
-    </main>
-
-    <!-- Custom Canvas Interactions Script -->
-    <script>
-      // Automatically update the Figma toolbar select dropdown value based on current scroll position
-      const frames = document.querySelectorAll('.frame-wrapper');
-      const navSelect = document.querySelector('.figma-navigator');
-
-      window.addEventListener('scroll', () => {
-        let currentFrameId = '';
-        const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-        frames.forEach(frame => {
-          const top = frame.offsetTop;
-          const height = frame.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            currentFrameId = frame.id;
-          }
-        });
-
-        if (currentFrameId) {
-          navSelect.value = currentFrameId;
-        } else {
-          navSelect.value = '';
-        }
-      }, { passive: true });
-
-      // Toggle password visibility helper
-      function togglePasswordVisibility(inputId, iconElement) {
-        const input = document.getElementById(inputId);
-        if (input.type === 'password') {
-          input.type = 'text';
-          iconElement.classList.remove('fa-eye');
-          iconElement.classList.add('fa-eye-slash');
-        } else {
-          input.type = 'password';
-          iconElement.classList.remove('fa-eye-slash');
-          iconElement.classList.add('fa-eye');
-        }
-      }
-    </script>
-  </body>
 </html>

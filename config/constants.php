@@ -38,17 +38,16 @@ const ALLOWED_UPLOAD_EXTENSIONS = [
     'rar',
 ];
 
-// Design tokens - sesuai dengan beranda.php
-const DESIGN_PRIMARY = '#1a9d6e';
-const DESIGN_PRIMARY_DARK = '#0f7a52';
-const DESIGN_PRIMARY_LIGHT = '#2fb87f';
-const DESIGN_ACCENT = '#c99a2e';
-const DESIGN_ACCENT_LIGHT = '#f3c969';
-const DESIGN_BG_PRIMARY = '#f5f8f6';
-const DESIGN_BG_SECONDARY = '#fbfdfb';
-const DESIGN_TEXT_PRIMARY = '#132019';
-const DESIGN_TEXT_SECONDARY = '#647268';
-const DESIGN_BORDER = '#dfe8e2';
-const DESIGN_DANGER = '#dc2626';
-const DESIGN_WARN = '#d97706';
-const DESIGN_OK = '#059669';
+// Design tokens — single source of truth (selaras assets/css/pesoma-public.css)
+const DESIGN_PRIMARY = '#0b2f9f';
+const DESIGN_PRIMARY_DARK = '#0a2580';
+const DESIGN_PRIMARY_LIGHT = '#3b82f6';
+const DESIGN_ACCENT = '#10b981';
+const DESIGN_BG_PRIMARY = '#f7f8fa';
+const DESIGN_BG_SECONDARY = '#ffffff';
+const DESIGN_TEXT_PRIMARY = '#0f172a';
+const DESIGN_TEXT_SECONDARY = '#475569';
+const DESIGN_BORDER = '#e8ebf0';
+const DESIGN_DANGER = '#b91c1c';
+const DESIGN_WARN = '#92400e';
+const DESIGN_OK = '#065f46';
