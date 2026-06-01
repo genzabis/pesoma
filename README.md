@@ -451,5 +451,4 @@ Proyek ini dilisensikan di bawah **MIT License**. Lihat file `LICENSE` untuk det
 **Terakhir diupdate**: 31 Mei 2026  
 **Versi**: 1.0.0  
 **Maintained by**: Tim Pengembang PESOMA 2026
-#   p e s o m a  
- 
+#
