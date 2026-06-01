@@ -1,4 +1,4 @@
-us# 📋 Portal PESOMA 2026
+# 📋 Portal PESOMA 2026
 
 Portal resmi **PESOMA 2026** (Pekan Seni dan Olahraga Mahasiswa) — UIN Prof. K.H. Saifuddin Zuhri Purwokerto. 
 
