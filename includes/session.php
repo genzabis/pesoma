@@ -2,6 +2,16 @@
 
 declare(strict_types=1);
 
+
+/**
+ * PESOMA III 2026 - UIN Prof. K.H. Saifuddin Zuhri Purwokerto
+ * Copyright (c) 2026 Tim Pengembang PESOMA III. All Rights Reserved.
+ *
+ * This file is part of a proprietary software project. Unauthorized
+ * copying, redistribution, or use of this file, via any medium, is
+ * strictly prohibited. See LICENSE for the full terms.
+ */
+
 require_once __DIR__ . '/../config/config.php';
 
 if (session_status() === PHP_SESSION_NONE) {

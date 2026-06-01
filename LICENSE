@@ -1,0 +1,59 @@
+PESOMA III 2026 — Proprietary License (All Rights Reserved)
+
+Copyright (c) 2026 Tim Pengembang PESOMA III, UIN Prof. K.H. Saifuddin Zuhri
+Purwokerto. All rights reserved.
+
+This repository (the "Software") is published in a public location for the sole
+purpose of transparency, code review, and academic reference. Publishing the
+Software in a public repository does NOT constitute a grant of any license to
+copy, modify, or use it.
+
+1. PERMITTED USE
+   You may:
+   a. Browse and read the source code on the hosting platform (GitHub, etc.).
+   b. Quote short, attributed excerpts (less than 25 consecutive lines) for
+      academic discussion, code review feedback, or non-commercial blog posts,
+      provided the source is clearly cited.
+
+2. PROHIBITED USE
+   Without prior written permission from the copyright holder, you may NOT:
+   a. Copy, clone, fork, or download the Software, in whole or in substantial
+      part, with the intent to reuse, redeploy, redistribute, or sublicense it.
+   b. Use the Software, in whole or in part, in any commercial product,
+      service, or competitive offering.
+   c. Modify the Software and publish a derivative work under your own name or
+      under a different license.
+   d. Remove, obscure, or alter any copyright notice, license header, or
+      attribution contained in the Software.
+   e. Use the names "PESOMA", "PESOMA III", or the institutional brand "UIN
+      Prof. K.H. Saifuddin Zuhri Purwokerto" to endorse or promote products
+      derived from the Software.
+
+3. CONTRIBUTIONS
+   Pull requests are welcome from authorized collaborators only. By submitting
+   a contribution, you agree that the copyright holder may relicense your
+   contribution under this license or a future license of equal or greater
+   restrictiveness.
+
+4. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING
+   FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+
+5. ENFORCEMENT
+   Unauthorized copying, redistribution, or use of the Software constitutes
+   copyright infringement under applicable Indonesian and international
+   copyright law (UU No. 28 Tahun 2014 tentang Hak Cipta and the Berne
+   Convention). The copyright holder reserves the right to:
+   a. File a DMCA takedown notice with GitHub or any other hosting platform.
+   b. Pursue civil and criminal remedies for infringement.
+
+6. CONTACT FOR PERMISSIONS
+   To request a license for any use beyond Section 1, contact:
+   pesoma@uinsaizu.ac.id
+
+End of License.

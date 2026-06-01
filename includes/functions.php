@@ -2,6 +2,16 @@
 
 declare(strict_types=1);
 
+
+/**
+ * PESOMA III 2026 - UIN Prof. K.H. Saifuddin Zuhri Purwokerto
+ * Copyright (c) 2026 Tim Pengembang PESOMA III. All Rights Reserved.
+ *
+ * This file is part of a proprietary software project. Unauthorized
+ * copying, redistribution, or use of this file, via any medium, is
+ * strictly prohibited. See LICENSE for the full terms.
+ */
+
 require_once __DIR__ . '/auth.php';
 
 /**
@@ -39,7 +49,7 @@ function json_to_array(?string $json): array
  */
 function ringkas(string $text, int $length = 160): string
 {
-    return mb_strimwidth($text, 0, $length, '…');
+    return mb_strimwidth($text, 0, $length, 'â€¦');
 }
 
 /**

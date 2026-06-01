@@ -2,6 +2,16 @@
 
 declare(strict_types=1);
 
+
+/**
+ * PESOMA III 2026 - UIN Prof. K.H. Saifuddin Zuhri Purwokerto
+ * Copyright (c) 2026 Tim Pengembang PESOMA III. All Rights Reserved.
+ *
+ * This file is part of a proprietary software project. Unauthorized
+ * copying, redistribution, or use of this file, via any medium, is
+ * strictly prohibited. See LICENSE for the full terms.
+ */
+
 require_once __DIR__ . '/../../includes/auth.php';
 require_once __DIR__ . '/../../includes/auth-layout.php';
 
@@ -45,7 +55,7 @@ auth_layout_start('Login', [
     'heading' => 'Unjuk aksi,<br>raih prestasi.',
 ]);
 ?>
-<a class="auth-back" href="<?= e(APP_URL) ?>/pages/beranda.php">← Beranda</a>
+<a class="auth-back" href="<?= e(APP_URL) ?>/pages/beranda.php">â† Beranda</a>
 
 <h2>Masuk akun.</h2>
 <p class="lead">Masukkan email atau NIM dan kata sandi portal Anda.</p>

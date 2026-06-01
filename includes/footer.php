@@ -2,6 +2,16 @@
 
 declare(strict_types=1);
 
+
+/**
+ * PESOMA III 2026 - UIN Prof. K.H. Saifuddin Zuhri Purwokerto
+ * Copyright (c) 2026 Tim Pengembang PESOMA III. All Rights Reserved.
+ *
+ * This file is part of a proprietary software project. Unauthorized
+ * copying, redistribution, or use of this file, via any medium, is
+ * strictly prohibited. See LICENSE for the full terms.
+ */
+
 /**
  * Penutup layout publik bersama. Dipanggil di akhir halaman pages/
  * setelah public_header() dari includes/header.php.
@@ -42,11 +52,11 @@ function public_footer(): void
                 <span><i class="fa-regular fa-envelope"></i> pesoma@uinsaizu.ac.id</span>
                 <span><i class="fa-solid fa-phone"></i> +62 812-0000-2026</span>
                 <span><i class="fa-solid fa-location-dot"></i> Gedung Student Center, UIN SAIZU Purwokerto</span>
-                <span><i class="fa-regular fa-clock"></i> Senin–Jumat · 08.00–16.00 WIB</span>
+                <span><i class="fa-regular fa-clock"></i> Seninâ€“Jumat Â· 08.00â€“16.00 WIB</span>
             </div>
         </div>
         <div class="public-footer-bottom">
-            <span>© 2026 PESOMA UIN Prof. K.H. Saifuddin Zuhri Purwokerto. All Rights Reserved.</span>
+            <span>Â© 2026 PESOMA UIN Prof. K.H. Saifuddin Zuhri Purwokerto. All Rights Reserved.</span>
             <span>UIN SAIZU Purwokerto</span>
         </div>
     </footer>

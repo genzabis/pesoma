@@ -2,8 +2,18 @@
 
 declare(strict_types=1);
 
+
 /**
- * Auth split-layout helper — minimal editorial.
+ * PESOMA III 2026 - UIN Prof. K.H. Saifuddin Zuhri Purwokerto
+ * Copyright (c) 2026 Tim Pengembang PESOMA III. All Rights Reserved.
+ *
+ * This file is part of a proprietary software project. Unauthorized
+ * copying, redistribution, or use of this file, via any medium, is
+ * strictly prohibited. See LICENSE for the full terms.
+ */
+
+/**
+ * Auth split-layout helper â€” minimal editorial.
  * Renders graphic side (left, cream) + form side (right, white).
  * Data berlebihan dari pemanggil (highlights, dsb) sengaja diabaikan.
  *
@@ -24,7 +34,7 @@ function auth_layout_start(string $title, array $graphic = []): void
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#0c1733">
-        <title><?= e($title) ?> — <?= e(APP_NAME) ?></title>
+        <title><?= e($title) ?> â€” <?= e(APP_NAME) ?></title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -43,7 +53,7 @@ function auth_layout_start(string $title, array $graphic = []): void
                     <?php endif; ?>
                 </div>
                 <div class="auth-graphic-footer">
-                    <span>UIN Prof. K.H. Saifuddin Zuhri Purwokerto · 2026</span>
+                    <span>UIN Prof. K.H. Saifuddin Zuhri Purwokerto Â· 2026</span>
                 </div>
             </aside>
             <section class="auth-form-side">

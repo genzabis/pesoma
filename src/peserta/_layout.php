@@ -2,6 +2,16 @@
 
 declare(strict_types=1);
 
+
+/**
+ * PESOMA III 2026 - UIN Prof. K.H. Saifuddin Zuhri Purwokerto
+ * Copyright (c) 2026 Tim Pengembang PESOMA III. All Rights Reserved.
+ *
+ * This file is part of a proprietary software project. Unauthorized
+ * copying, redistribution, or use of this file, via any medium, is
+ * strictly prohibited. See LICENSE for the full terms.
+ */
+
 require_once __DIR__ . '/../../includes/auth.php';
 
 require_role(ROLE_PESERTA);
@@ -44,7 +54,7 @@ function peserta_header(string $title, string $active = ''): void
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#0c1733">
-        <title><?= e($title) ?> — <?= e(APP_NAME) ?></title>
+        <title><?= e($title) ?> â€” <?= e(APP_NAME) ?></title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
@@ -62,7 +72,7 @@ function peserta_header(string $title, string $active = ''): void
                         <a class="<?= basename($href) === $active ? 'active' : '' ?>" href="<?= e($href) ?>"><i class="<?= e(peserta_nav_icon($href)) ?>" aria-hidden="true"></i><span><?= e($label) ?></span></a>
                     <?php endforeach; ?>
                 </nav>
-                <div class="sidebar-footer">UIN SAIZU · 2026</div>
+                <div class="sidebar-footer">UIN SAIZU Â· 2026</div>
             </aside>
             <main class="main">
                 <div class="topbar">

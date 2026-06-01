@@ -2,6 +2,16 @@
 
 declare(strict_types=1);
 
+
+/**
+ * PESOMA III 2026 - UIN Prof. K.H. Saifuddin Zuhri Purwokerto
+ * Copyright (c) 2026 Tim Pengembang PESOMA III. All Rights Reserved.
+ *
+ * This file is part of a proprietary software project. Unauthorized
+ * copying, redistribution, or use of this file, via any medium, is
+ * strictly prohibited. See LICENSE for the full terms.
+ */
+
 const ROLE_ADMIN = 'admin';
 const ROLE_PANITIA = 'panitia';
 const ROLE_JURI = 'juri';
@@ -38,7 +48,7 @@ const ALLOWED_UPLOAD_EXTENSIONS = [
     'rar',
 ];
 
-// Design tokens — single source of truth (selaras assets/css/pesoma-public.css)
+// Design tokens â€” single source of truth (selaras assets/css/pesoma-public.css)
 const DESIGN_PRIMARY = '#0b2f9f';
 const DESIGN_PRIMARY_DARK = '#0a2580';
 const DESIGN_PRIMARY_LIGHT = '#3b82f6';

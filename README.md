@@ -2,7 +2,9 @@
 
 Portal resmi **PESOMA III 2026** (Pekan Seni dan Olahraga Mahasiswa) — UIN Prof. K.H. Saifuddin Zuhri Purwokerto.
 
-> Sistem pendaftaran, penilaian, dan publikasi 14 cabang lomba untuk 6 fakultas. Backend PHP murni + MySQL, tanpa framework JS.
+> ⚠️ **All Rights Reserved.** Repo ini publik untuk transparansi & code review, bukan open source. Lihat [`LICENSE`](LICENSE) — copy / fork / clone dengan tujuan reuse, redistribusi, atau penggunaan komersial **tidak diizinkan tanpa izin tertulis**.
+
+Sistem pendaftaran, penilaian, dan publikasi 14 cabang lomba untuk 6 fakultas. Backend PHP murni + MySQL, tanpa framework JS.
 
 ---
 
@@ -149,7 +151,19 @@ Untuk Windows: pakai `scripts/windows-task-scheduler.example.bat`.
 
 ## 📝 Lisensi
 
-MIT License.
+**Proprietary — All Rights Reserved.** Lihat [`LICENSE`](LICENSE) untuk teks lengkap.
+
+Yang **boleh**: browse & baca source code di GitHub, kutip cuplikan pendek (≤ 25 baris) untuk diskusi akademik dengan attribution jelas.
+
+Yang **tidak boleh** tanpa izin tertulis:
+- Copy / clone / fork repo dengan tujuan reuse atau redeploy
+- Pakai code di produk komersial atau layanan kompetitor
+- Modifikasi & rilis ulang sebagai derivative work
+- Hapus copyright header / attribution
+
+Pelanggaran akan ditindak via [DMCA Takedown ke GitHub](https://github.com/contact/dmca) dan/atau jalur hukum berdasarkan UU No. 28 Tahun 2014 tentang Hak Cipta.
+
+Untuk request izin pemakaian, kirim ke <pesoma@uinsaizu.ac.id>. Lihat juga [`.github/SECURITY.md`](.github/SECURITY.md) untuk pelaporan kerentanan keamanan.
 
 ---
 

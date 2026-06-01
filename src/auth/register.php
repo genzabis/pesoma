@@ -2,6 +2,16 @@
 
 declare(strict_types=1);
 
+
+/**
+ * PESOMA III 2026 - UIN Prof. K.H. Saifuddin Zuhri Purwokerto
+ * Copyright (c) 2026 Tim Pengembang PESOMA III. All Rights Reserved.
+ *
+ * This file is part of a proprietary software project. Unauthorized
+ * copying, redistribution, or use of this file, via any medium, is
+ * strictly prohibited. See LICENSE for the full terms.
+ */
+
 require_once __DIR__ . '/../../includes/auth.php';
 require_once __DIR__ . '/../../includes/auth-layout.php';
 
@@ -83,7 +93,7 @@ auth_layout_start('Daftar Peserta', [
     'heading' => 'Daftar akun<br>peserta.',
 ]);
 ?>
-<a class="auth-back" href="<?= e(APP_URL) ?>/pages/beranda.php">← Beranda</a>
+<a class="auth-back" href="<?= e(APP_URL) ?>/pages/beranda.php">â† Beranda</a>
 
 <h2>Buat akun.</h2>
 <p class="lead">Lengkapi data sesuai dengan data resmi mahasiswa UIN SAIZU. Anda dapat mendaftar lebih dari satu cabang lomba dari satu akun.</p>
